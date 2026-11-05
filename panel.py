@@ -29,9 +29,9 @@ def neb_key():
     return key.strip()
 
 JUDGES = {"gpt-oss-120b (OpenAI, open-weight)": "openai/gpt-oss-120b",
-          "DeepSeek-V4-Flash (DeepSeek)": "deepseek-ai/DeepSeek-V4-Flash-0731",
+          "DeepSeek-V4.1-Flash (DeepSeek)": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
           "GLM-5.2 (Zhipu)": "zai-org/GLM-5.2",
-          "Qwen3-235B (Alibaba)": "Qwen/Qwen3-235B-A22B-Instruct-2507"}
+          "Qwen3-30B (Alibaba)": "Qwen/Qwen3-30B-A3B-Instruct-2507"}
 
 def ask(model, key, msgs):
     body = {"model": model, "messages": msgs, "max_tokens": 8000, "temperature": 0}

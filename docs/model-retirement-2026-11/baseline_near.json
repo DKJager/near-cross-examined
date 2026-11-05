@@ -1,0 +1,18 @@
+{
+ "Qwen/Qwen3-235B-A22B-Instruct-2507": {
+  "seat": "Qwen3-235B (Alibaba)",
+  "agree": "10/10",
+  "diff": {},
+  "rejected_citations": 0,
+  "secs": 13.4
+ },
+ "deepseek-ai/DeepSeek-V4-Flash-0731": {
+  "seat": "DeepSeek-V4-Flash (DeepSeek)",
+  "agree": "10/10",
+  "diff": {},
+  "rejected_citations": 0,
+  "secs": 11.2
+ }
+}
+
+

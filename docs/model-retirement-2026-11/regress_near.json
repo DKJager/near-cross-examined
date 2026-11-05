@@ -1,0 +1,37 @@
+{
+ "Qwen/Qwen3-30B-A3B-Instruct-2507": {
+  "seat": "Qwen3-235B (Alibaba)",
+  "agree": "9/10",
+  "diff": {
+   "C10": [
+    "MIXED",
+    "SUPPORTED"
+   ]
+  },
+  "rejected_citations": 0,
+  "secs": 5.9
+ },
+ "Qwen/Qwen3.8-27B": {
+  "seat": "Qwen3-235B (Alibaba)",
+  "error": "\n\n{\n  \"claims\": [\n    {\n      \"id\": \"C1\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\n        \"active.yoy_pct\",\n        \"txns.yoy_pct\",\n        \"w90.active.yoy_pct\",\n        \"w90.txns.yoy_pct\",\n",
+  "secs": 22.3
+ },
+ "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+  "seat": "DeepSeek-V4-Flash (DeepSeek)",
+  "agree": "8/10",
+  "diff": {
+   "C2": [
+    "SUPPORTED",
+    "MIXED"
+   ],
+   "C3": [
+    "SUPPORTED",
+    "MIXED"
+   ]
+  },
+  "rejected_citations": 0,
+  "secs": 14.7
+ }
+}
+
+
