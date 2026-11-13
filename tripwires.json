@@ -1,0 +1,12 @@
+{
+ "made": "2026-11-11",
+ "rule": "On the due date, the thesis (NEAR's price is ahead of what its one paying product returns to holders) is WRONG if at least two of T1, T2, T3 are HIT. It is STRONGER if T4 or T5 is HIT. Anything else leaves it standing. T6 is a data check: if it is a MISS, nothing is scored until the two providers are reconciled.",
+ "tripwires": [
+  {"id": "T1", "side": "flips the thesis", "statement": "Revenue returned to holders, annualised, covers half of new issuance or more.", "path": "holders.cover_of_issuance_pct", "op": ">=", "threshold": 50, "due": "2027-02-11"},
+  {"id": "T2", "side": "flips the thesis", "statement": "Market cap falls to 100 times annualised NEAR Intents revenue or less (from revenue rising or price falling).", "path": "valuation.mcap_to_intents_revenue_annualised", "op": "<=", "threshold": 100, "due": "2027-02-11"},
+  {"id": "T3", "side": "flips the thesis", "statement": "Usage widens again: daily active accounts recover to 150,000 or more (30-day mean).", "path": "active.avg_30d", "op": ">=", "threshold": 150000, "due": "2027-02-11"},
+  {"id": "T4", "side": "strengthens the thesis", "statement": "The one product stalls: NEAR's daily NEAR Intents revenue falls below $30,000 (30-day mean), about half of today.", "path": "intents_daily.revenue_avg_30d", "op": "<", "threshold": 30000, "due": "2027-02-11"},
+  {"id": "T5", "side": "strengthens the thesis", "statement": "App fees on NEAR fall back below their year-ago level of $151,000 a day (30-day mean).", "path": "apps.fees_avg_30d", "op": "<", "threshold": 151000, "due": "2027-02-11"},
+  {"id": "T6", "side": "data check", "statement": "Two providers still agree: 365-day gas fees from NearBlocks and from DefiLlama differ by 5% or less.", "path": "crosscheck.gas_fees_abs_diff_pct", "op": "<=", "threshold": 5, "due": "2027-02-11"}
+ ]
+}

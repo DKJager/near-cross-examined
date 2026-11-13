@@ -1,0 +1,114 @@
+{
+  "charts_raw.json": {
+    "bytes": 1542671,
+    "fetched_at": "2026-11-11T13:55:27Z",
+    "sha256": "6bbb419ad3db986171b8da549cc51dc9abbe48ee6542ac18ee895c3a6213a599",
+    "url": "https://api.nearblocks.io/v1/charts",
+    "what": "NearBlocks: daily chain data (accounts, transactions, gas fees, transfer volume, supply, price)"
+  },
+  "coingecko_near.json": {
+    "bytes": 37950,
+    "fetched_at": "2026-11-11T13:55:44Z",
+    "sha256": "992c39d4028f7dad32c84d34b6576121342bd44d310b2f69623d5a3f7f45addd",
+    "url": "https://api.coingecko.com/api/v3/coins/near/market_chart?vs_currency=usd&days=365&interval=daily",
+    "what": "CoinGecko: daily NEAR price and market cap, 365 days; a second source for the NearBlocks price"
+  },
+  "intents_days.json": {
+    "bytes": 18794,
+    "fetched_at": "2026-11-11T13:53:48Z",
+    "sha256": "7a3f1a4d1603d97c06408369d5c11fa5259ca6e3eaf9cdb9a5bdd9d2365c80e7",
+    "url": "https://explorer.near-intents.org/api/v0/transactions",
+    "what": "NEAR Intents Explorer: successful 1Click swaps on one full UTC Sunday per week (intents.py)"
+  },
+  "llama_dex_near.json": {
+    "bytes": 54963,
+    "fetched_at": "2026-11-11T13:55:41Z",
+    "sha256": "a0c34e7645f3bfbf97cc5517143bef794083794754096cd589c9209e9e0a8848",
+    "url": "https://api.llama.fi/overview/dexs/near?excludeTotalDataChart=false&excludeTotalDataChartBreakdown=true",
+    "what": "DefiLlama: daily exchange volume on NEAR"
+  },
+  "llama_fees_near.json": {
+    "bytes": 122910,
+    "fetched_at": "2026-11-11T13:55:31Z",
+    "sha256": "3163b96e3f0f3179d57126e26a91720682f52ddc10df630b5782cba0d006f301",
+    "url": "https://api.llama.fi/overview/fees/near?excludeTotalDataChart=false&excludeTotalDataChartBreakdown=false&dataType=dailyFees",
+    "what": "DefiLlama: daily fees paid by users of every app on NEAR, and the chain's own gas fees, by protocol"
+  },
+  "llama_gas_fees_near.json": {
+    "bytes": 122236,
+    "fetched_at": "2026-11-11T13:55:35Z",
+    "sha256": "fee773c1781c5f2929bba87a552b492a2162017a32fe69f29fa36c726df756f8",
+    "url": "https://api.llama.fi/summary/fees/near?dataType=dailyFees",
+    "what": "DefiLlama (data from Allium): daily gas fees on the NEAR chain; a second source for NearBlocks txn_fee_usd"
+  },
+  "llama_holders_revenue_near.json": {
+    "bytes": 20656,
+    "fetched_at": "2026-11-11T13:55:34Z",
+    "sha256": "25139f1aad9878da1f973aa52cc79f4f7e0242713c37647d516e9ad7cedd82f7",
+    "url": "https://api.llama.fi/overview/fees/near?excludeTotalDataChart=false&excludeTotalDataChartBreakdown=true&dataType=dailyHoldersRevenue",
+    "what": "DefiLlama: daily revenue returned to token holders on NEAR (NEAR Intents buybacks since 23 Feb 2026, and burned gas)"
+  },
+  "llama_intents_fees.json": {
+    "bytes": 39010,
+    "fetched_at": "2026-11-11T13:55:37Z",
+    "sha256": "541edcc46debe6284c7e65213d992abcc551fcdcd3ea57d55ab09bc6d1095996",
+    "url": "https://api.llama.fi/summary/fees/near-intents?dataType=dailyFees",
+    "what": "DefiLlama: daily gross fees on NEAR Intents swaps, every day since May 2025"
+  },
+  "llama_intents_revenue.json": {
+    "bytes": 36581,
+    "fetched_at": "2026-11-11T13:55:38Z",
+    "sha256": "f661998c382735bc0c8a07c0c12b8caf8547d3ecd0b0f3888636cbc9ed380ee2",
+    "url": "https://api.llama.fi/summary/fees/near-intents?dataType=dailyRevenue",
+    "what": "DefiLlama: daily NEAR Intents revenue captured by NEAR"
+  },
+  "llama_revenue_near.json": {
+    "bytes": 43146,
+    "fetched_at": "2026-11-11T13:55:32Z",
+    "sha256": "534705288b8556dda7407b8a71af494ebe09a9ea6ec3f21c9010ba928cfd0006",
+    "url": "https://api.llama.fi/overview/fees/near?excludeTotalDataChart=false&excludeTotalDataChartBreakdown=true&dataType=dailyRevenue",
+    "what": "DefiLlama: daily revenue kept by protocols on NEAR"
+  },
+  "llama_stablecoins_near.json": {
+    "bytes": 367848,
+    "fetched_at": "2026-11-11T13:55:43Z",
+    "sha256": "7ba2fd393a42378d071232f812837e6dffe41a5282d5344ad898a38008ebf880",
+    "url": "https://stablecoins.llama.fi/stablecoincharts/Near",
+    "what": "DefiLlama: daily stablecoin supply on NEAR"
+  },
+  "llama_tvl_near.json": {
+    "bytes": 67996,
+    "fetched_at": "2026-11-11T13:55:40Z",
+    "sha256": "b3a92fe67ba89aaf21e3bd8006b868a7d8fe4e0b2b8a47b461a1ba1a29e483b2",
+    "url": "https://api.llama.fi/v2/historicalChainTvl/Near",
+    "what": "DefiLlama: daily total value locked on NEAR"
+  },
+  "stats_raw.json": {
+    "bytes": 479,
+    "fetched_at": "2026-11-11T13:55:29Z",
+    "sha256": "0c7afe9ac186bb3b3ab273ae626c2d1cc75640683bd15fc5348151adf5bf2b9b",
+    "url": "https://api.nearblocks.io/v1/stats",
+    "what": "NearBlocks: current network stats"
+  },
+  "bq_active_accounts_daily.csv": {
+    "bytes": 6470,
+    "fetched_at": "2026-11-13T16:17:40.197862+00:00",
+    "sha256": "7aa47e8f693a6d85e004414ce2699c53d973900e1fa93f89a61666e65c1cb9b9",
+    "url": "https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=crypto_near_mainnet_us",
+    "what": "BigQuery daily active accounts daily from sql/active_accounts_daily.sql"
+  },
+  "bq_transactions_daily.csv": {
+    "bytes": 6740,
+    "fetched_at": "2026-11-13T16:17:40.197908+00:00",
+    "sha256": "5ba9e558d32052daf4121ca39e22cb28c222f438902ee20516e62dab241b54a6",
+    "url": "https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=crypto_near_mainnet_us",
+    "what": "BigQuery daily transactions daily from sql/transactions_daily.sql"
+  },
+  "bq_contract_usage_daily.csv": {
+    "bytes": 5683,
+    "fetched_at": "2026-11-13T16:17:40.197932+00:00",
+    "sha256": "0cefc606adbb2dd3718128b25482ff46ed06866dacea7fcc77003b6a4dc43310",
+    "url": "https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=crypto_near_mainnet_us",
+    "what": "BigQuery daily contract usage daily from sql/contract_usage_daily.sql"
+  }
+}

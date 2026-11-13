@@ -2,3 +2,20 @@ __pycache__/
 .pytest_cache/
 *.bak*
 *.log
+# raw source files: fetched by fetch.py, not shipped (see data/RAW_NOT_COMMITTED.txt)
+data/charts_raw.json
+data/stats_raw.json
+data/coingecko_near.json
+data/intents_days.json
+data/intents_sundays.csv
+data/nearblocks_daily.csv
+data/llama_dex_near.json
+data/llama_fees_near.json
+data/llama_gas_fees_near.json
+data/llama_holders_revenue_near.json
+data/llama_intents_fees.json
+data/llama_intents_revenue.json
+data/llama_revenue_near.json
+data/llama_stablecoins_near.json
+data/llama_tvl_near.json
+data_online/

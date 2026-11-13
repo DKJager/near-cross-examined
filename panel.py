@@ -9,12 +9,23 @@ CLAIMS = [
  ("C2", "bull", "The remaining usage is worth more: fees and transfer value per active account have risen, so the drop in accounts overstates the drop in real economic activity."),
  ("C3", "bear", "Account counts were inflated: the drop in new accounts and active contracts since the 2024 peak points to automated or incentive-driven activity that has since left."),
  ("C4", "bull", "Value moving on NEAR is growing: USD transfer volume is well above a year ago."),
- ("C5", "bear", "Fees do not pay for security: annual fee revenue is tiny next to the value of new token issuance, so holders are diluted far more than fees return."),
- ("C6", "bear", "The valuation is far ahead of usage: market cap is thousands of times annual fees."),
+ ("C5", "bear", "Gas fees do not pay for security: annual gas fees are tiny next to the value of new token issuance."),
+ ("C6", "bear", "Measured against gas fees, the valuation is far ahead of usage: market cap is thousands of times annual gas fees."),
  ("C7", "neutral", "Activity is not a leading indicator of price on NEAR: changes in active accounts barely predict the next quarter's price."),
  ("C8", "bull", "Supply inflation is modest: total supply grew only a few percent in the last year."),
- ("C9", "bull", "Transfer value grew even after removing the price rise: transfer volume measured in NEAR tokens is above a year ago."),
- ("C10", "bull", "Real usage moved to cross-chain swaps: NEAR Intents swap count and USD volume are higher now than a year ago, while account counts fell."),
+ ("C9", "bear", "Most of the growth in dollar transfer volume is the price rise: counted in NEAR tokens, transfer volume is only slightly above a year ago."),
+ ("C10", "bull", "Real usage moved to cross-chain swaps: NEAR Intents fees are well above a year ago, while account counts fell."),
+ ("C11", "bull", "Gas fees are the wrong yardstick: users pay the apps on NEAR many times more than they pay the chain, and that total is growing."),
+ ("C12", "bull", "Holders now get paid: the NEAR Intents revenue that NEAR keeps is used to buy back the token, and it is several times higher than a year ago."),
+ ("C13", "bear", "It is a one-product economy: almost all app fees on NEAR come from NEAR Intents, and few other apps earn meaningful fees."),
+ ("C14", "bear", "Even counting buybacks, holders are still diluted and the price is rich: buybacks cover only a minority of new issuance, and market cap is hundreds of times that revenue."),
+ ("C15", "neutral", "The numbers can be trusted: a second, independent provider reports the same gas fees as the first."),
+ # Talking points heard from each side, and one planted false statement. A claim auditor has to be able to say no.
+ ("C16", "bull", "NEAR is already deflationary: buybacks and burned fees outweigh new issuance."),
+ ("C17", "bear", "NEAR is a ghost chain: almost nobody pays to use anything on it."),
+ ("C18", "bull", "Stablecoin liquidity on NEAR is growing alongside NEAR Intents."),
+ ("C19", "bear", "DeFi on NEAR is shrinking: value locked and exchange volume are below a year ago."),
+ ("C20", "control", "Daily transactions on NEAR are higher than a year ago."),
 ]
 
 def neb_key():
@@ -34,7 +45,7 @@ JUDGES = {"gpt-oss-120b (OpenAI, open-weight)": "openai/gpt-oss-120b",
           "Qwen3-30B (Alibaba)": "Qwen/Qwen3-30B-A3B-Instruct-2507"}
 
 def ask(model, key, msgs):
-    body = {"model": model, "messages": msgs, "max_tokens": 8000, "temperature": 0}
+    body = {"model": model, "messages": msgs, "max_tokens": 16000, "temperature": 0}
     for attempt in range(3):
         try:
             r = urllib.request.Request("https://api.tokenfactory.nebius.com/v1/chat/completions", data=json.dumps(body).encode(),
@@ -49,7 +60,7 @@ def ask(model, key, msgs):
 def flat(m, pre=""):
     out = {}
     for k, v in m.items():
-        if k in ("monthly", "intents_weekly"): continue
+        if k in ("monthly", "monthly2", "intents_weekly"): continue
         p = pre + k
         if isinstance(v, dict): out.update(flat(v, p + "."))
         elif isinstance(v, (int, float)): out[p] = v
@@ -62,10 +73,10 @@ def prompt(metrics):
     mon = metrics["monthly"]; ks = sorted(mon)[-24:]
     mt = "\n".join(f"{k}: active={mon[k]['active']:.0f} txns={mon[k]['txns']:.0f} fees_usd={mon[k]['fee_usd']:.0f} new_acc={mon[k]['new_acc']:.0f} price={mon[k]['price']:.3f}" for k in ks)
     iw = metrics.get("intents_weekly", {})
-    it = ("\nNEAR INTENTS 1CLICK SWAPS, one full UTC Sunday per week (cite as metric paths under intents.*):\n" + "\n".join(f"{k}: swaps={v['swaps']} usd={v['usd']:.0f}" for k, v in iw.items())) if iw else "\n(No NEAR Intents data available: mark C10 NOT_TESTABLE.)"
+    it = ("\nNEAR INTENTS 1CLICK SWAPS, one full UTC Sunday per week (cite as metric paths under intents.*):\n" + "\n".join(f"{k}: swaps={v['swaps']} usd={v['usd']:.0f}" for k, v in iw.items())) if iw else "\n(No weekly NEAR Intents sample available.)"
     cl = "\n".join(f"{c} [{s}] {t}" for c, s, t in CLAIMS)
     return f"""You are one judge on an evidence panel testing an investment thesis about the NEAR blockchain.
-Use ONLY the data below (NearBlocks daily chart data, as of {metrics['as_of']}). Do not use outside knowledge for numbers.
+Use ONLY the data below, as of {metrics['as_of']}: NearBlocks daily chain data; DefiLlama app fees, revenue, value locked, exchange volume and stablecoins (apps.*, intents_daily.*, holders.*, valuation.*, tvl.*, dex.*, stables.*); and a cross-check of two providers (crosscheck.*). Do not use outside knowledge for numbers.
 
 METRICS (path = value):
 {table}
@@ -110,6 +121,10 @@ def run(metrics_path="out/metrics.json", out_path="out/panel.json"):
     votes = {}
     for n, t in raw.items():
         d = parse(t)
+        for _ in range(2):                      # an answer that is cut off or is not JSON is asked for again, up to twice
+            if d:
+                break
+            t = ask(JUDGES[n], key, msgs); raw[n] = t; d = parse(t)
         votes[n] = d if d else {"error": t[:500]}
     rec = []
     for c, side, text in CLAIMS:

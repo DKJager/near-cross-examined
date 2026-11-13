@@ -1,10 +1,10 @@
 {
- "as_of": "2026-10-31",
+ "as_of": "2026-11-09",
  "judges": [
   "gpt-oss-120b (OpenAI, open-weight)",
-  "DeepSeek-V4-Flash (DeepSeek)",
+  "DeepSeek-V4.1-Flash (DeepSeek)",
   "GLM-5.2 (Zhipu)",
-  "Qwen3-235B (Alibaba)"
+  "Qwen3-30B (Alibaba)"
  ],
  "claims": [
   {
@@ -13,36 +13,41 @@
    "claim": "Usage is collapsing: NEAR's daily active accounts and transactions are far below a year ago.",
    "votes": {
     "gpt-oss-120b (OpenAI, open-weight)": "SUPPORTED",
-    "DeepSeek-V4-Flash (DeepSeek)": "SUPPORTED",
+    "DeepSeek-V4.1-Flash (DeepSeek)": "SUPPORTED",
     "GLM-5.2 (Zhipu)": "SUPPORTED",
-    "Qwen3-235B (Alibaba)": "SUPPORTED"
+    "Qwen3-30B (Alibaba)": "SUPPORTED"
    },
    "verdict": "SUPPORTED",
    "agreement": "4/4",
    "evidence": [
     {
      "path": "active.yoy_pct",
-     "value": -73.5130378393887,
+     "value": -77.85976353674498,
      "cited_by": 4
     },
     {
      "path": "txns.yoy_pct",
-     "value": -84.24899513324084,
+     "value": -85.09279071824083,
      "cited_by": 4
     },
     {
      "path": "w90.active.yoy_pct",
-     "value": -76.0797748987765,
-     "cited_by": 3
+     "value": -75.77449646805353,
+     "cited_by": 1
     },
     {
      "path": "w90.txns.yoy_pct",
-     "value": -84.40014213924363,
-     "cited_by": 3
+     "value": -84.11775649032391,
+     "cited_by": 1
     },
     {
-     "path": "active_peak.current_vs_peak_pct",
-     "value": -96.79248917503355,
+     "path": "new_acc.yoy_pct",
+     "value": -95.6632680796574,
+     "cited_by": 1
+    },
+    {
+     "path": "active_contracts.yoy_pct",
+     "value": -97.6386770439823,
      "cited_by": 1
     }
    ],
@@ -50,19 +55,19 @@
    "caveats": [
     [
      "gpt-oss-120b (OpenAI, open-weight)",
-     "The metrics are averages over 30 days and may not capture short\u2011term spikes in usage."
+     "Averages may mask short\u2011term spikes or off\u2011chain activity."
     ],
     [
-     "DeepSeek-V4-Flash (DeepSeek)",
-     "The drop could partly reflect removal of bot or incentive-driven activity rather than loss of genuine users."
+     "DeepSeek-V4.1-Flash (DeepSeek)",
+     "Averages can be distorted by measurement changes or one-off activity, but both the 30-day and 90-day comparisons point the same way."
     ],
     [
      "GLM-5.2 (Zhipu)",
-     "The 30-day window ending 2026-10 shows a modest uptick in active accounts versus the prior month (monthly.2026-09.active to monthly.2026-10.active), so the collapse may be decelerating rather than still accelerating."
+     "A 30-day mean could be distorted by a single anomalous week, though the 90-day window (w90.active.yoy_pct, w90.txns.yoy_pct) confirms the same trend."
     ],
     [
-     "Qwen3-235B (Alibaba)",
-     "A temporary drop in activity may not reflect long-term decline if usage recovers or shifts off-chain."
+     "Qwen3-30B (Alibaba)",
+     "The decline may reflect a shift to less frequent but higher-value usage, not necessarily a collapse in real activity."
     ]
    ]
   },
@@ -71,42 +76,42 @@
    "side": "bull",
    "claim": "The remaining usage is worth more: fees and transfer value per active account have risen, so the drop in accounts overstates the drop in real economic activity.",
    "votes": {
-    "gpt-oss-120b (OpenAI, open-weight)": "SUPPORTED",
-    "DeepSeek-V4-Flash (DeepSeek)": "SUPPORTED",
+    "gpt-oss-120b (OpenAI, open-weight)": "MIXED",
+    "DeepSeek-V4.1-Flash (DeepSeek)": "SUPPORTED",
     "GLM-5.2 (Zhipu)": "SUPPORTED",
-    "Qwen3-235B (Alibaba)": "SUPPORTED"
+    "Qwen3-30B (Alibaba)": "SUPPORTED"
    },
    "verdict": "SUPPORTED",
-   "agreement": "4/4",
+   "agreement": "3/4",
    "evidence": [
     {
      "path": "fee_per_active.now",
-     "value": 0.08306270164279043,
+     "value": 0.08910492715451926,
      "cited_by": 4
     },
     {
      "path": "fee_per_active.year_ago",
-     "value": 0.03040044707345085,
+     "value": 0.028480574433619486,
      "cited_by": 4
     },
     {
      "path": "vol_usd.yoy_pct",
-     "value": 215.72710713084072,
+     "value": 125.43516824020125,
      "cited_by": 3
     },
     {
      "path": "active.yoy_pct",
-     "value": -73.5130378393887,
+     "value": -77.85976353674498,
      "cited_by": 2
     },
     {
-     "path": "fee_usd.yoy_pct",
-     "value": -27.63005655623738,
+     "path": "apps.fees_yoy_pct",
+     "value": 46.87762610039399,
      "cited_by": 1
     },
     {
-     "path": "vol_usd.avg_30d",
-     "value": 249030954.2505282,
+     "path": "paradox.near_per_txn_x",
+     "value": 7.345107425895477,
      "cited_by": 1
     }
    ],
@@ -114,19 +119,19 @@
    "caveats": [
     [
      "gpt-oss-120b (OpenAI, open-weight)",
-     "Higher fees per active could be driven by a few large transactions rather than broad economic activity."
+     "Per\u2011active metrics are derived indirectly; total economic activity could still be lower."
     ],
     [
-     "DeepSeek-V4-Flash (DeepSeek)",
-     "Higher fees and transfer value per active account could be driven by a few large transactions or price effects rather than broad economic activity."
+     "DeepSeek-V4.1-Flash (DeepSeek)",
+     "Per-account averages can rise because low-value or automated accounts left, and total gas fees still fell."
     ],
     [
      "GLM-5.2 (Zhipu)",
-     "Fee per active is a ratio that can rise simply because the denominator collapsed; the 90-day fee figure tells a weaker story (w90.fee_usd.yoy_pct is -55.977) suggesting the 30-day window may capture a transient fee spike."
+     "Higher per-account value could reflect a few large Intents users rather than broad-based economic intensity among remaining accounts."
     ],
     [
-     "Qwen3-235B (Alibaba)",
-     "Higher value per user may not compensate for massive user loss if network effects depend on scale."
+     "Qwen3-30B (Alibaba)",
+     "Higher fees per user could be due to price inflation rather than increased economic value per transaction."
     ]
    ]
   },
@@ -136,27 +141,27 @@
    "claim": "Account counts were inflated: the drop in new accounts and active contracts since the 2024 peak points to automated or incentive-driven activity that has since left.",
    "votes": {
     "gpt-oss-120b (OpenAI, open-weight)": "SUPPORTED",
-    "DeepSeek-V4-Flash (DeepSeek)": "SUPPORTED",
-    "GLM-5.2 (Zhipu)": "SUPPORTED",
-    "Qwen3-235B (Alibaba)": "SUPPORTED"
+    "DeepSeek-V4.1-Flash (DeepSeek)": "MIXED",
+    "GLM-5.2 (Zhipu)": "MIXED",
+    "Qwen3-30B (Alibaba)": "SUPPORTED"
    },
-   "verdict": "SUPPORTED",
-   "agreement": "4/4",
+   "verdict": "SPLIT",
+   "agreement": "2/4",
    "evidence": [
     {
      "path": "new_acc.yoy_pct",
-     "value": -96.20420938285015,
+     "value": -95.6632680796574,
      "cited_by": 4
     },
     {
      "path": "active_contracts.yoy_pct",
-     "value": -97.81603929947815,
+     "value": -97.6386770439823,
      "cited_by": 4
     },
     {
      "path": "active_peak.current_vs_peak_pct",
-     "value": -96.79248917503355,
-     "cited_by": 3
+     "value": -97.4197906621665,
+     "cited_by": 4
     },
     {
      "path": "monthly.2024-12.new_acc",
@@ -167,25 +172,30 @@
      "path": "monthly.2026-10.new_acc",
      "value": 9503.58064516129,
      "cited_by": 1
+    },
+    {
+     "path": "txn_step.change_pct",
+     "value": -72.79283564720006,
+     "cited_by": 1
     }
    ],
    "rejected_citations": [],
    "caveats": [
     [
      "gpt-oss-120b (OpenAI, open-weight)",
-     "The drop may also reflect a natural market cycle rather than solely inflated past activity."
+     "Decline could reflect a market cycle rather than prior incentive\u2011driven inflation."
     ],
     [
-     "DeepSeek-V4-Flash (DeepSeek)",
-     "The decline could also reflect organic user loss or changes in how contracts are counted."
+     "DeepSeek-V4.1-Flash (DeepSeek)",
+     "The data show the decline but cannot prove it was automated or incentive-driven rather than genuine user attrition."
     ],
     [
      "GLM-5.2 (Zhipu)",
-     "The data shows the magnitude of the drop but does not directly identify whether the lost activity was automated, incentive-driven, or organic; the causal claim is inferred from the scale of decline, not proven."
+     "The dramatic drops in new accounts and active contracts are real, but the data cannot directly distinguish automated or incentive-driven activity from genuine organic churn."
     ],
     [
-     "Qwen3-235B (Alibaba)",
-     "Past high account and contract activity could have been organic but unsustainable, not necessarily inflated."
+     "Qwen3-30B (Alibaba)",
+     "The drop in new accounts and contracts may reflect a maturation of the ecosystem rather than exit of incentive-driven actors."
     ]
    ]
   },
@@ -195,144 +205,164 @@
    "claim": "Value moving on NEAR is growing: USD transfer volume is well above a year ago.",
    "votes": {
     "gpt-oss-120b (OpenAI, open-weight)": "SUPPORTED",
-    "DeepSeek-V4-Flash (DeepSeek)": "SUPPORTED",
+    "DeepSeek-V4.1-Flash (DeepSeek)": "SUPPORTED",
     "GLM-5.2 (Zhipu)": "SUPPORTED",
-    "Qwen3-235B (Alibaba)": "SUPPORTED"
+    "Qwen3-30B (Alibaba)": "SUPPORTED"
    },
    "verdict": "SUPPORTED",
    "agreement": "4/4",
    "evidence": [
     {
      "path": "vol_usd.yoy_pct",
-     "value": 215.72710713084072,
+     "value": 125.43516824020125,
      "cited_by": 4
     },
     {
      "path": "w90.vol_usd.yoy_pct",
-     "value": 175.28683841369363,
-     "cited_by": 2
+     "value": 165.619190640544,
+     "cited_by": 3
     },
     {
      "path": "vol_usd.avg_30d",
-     "value": 249030954.2505282,
+     "value": 195806804.57473177,
      "cited_by": 1
     },
     {
      "path": "vol_usd.avg_30d_year_ago",
-     "value": 78875379.60031004,
+     "value": 86857257.50034687,
      "cited_by": 1
     }
    ],
-   "rejected_citations": [],
+   "rejected_citations": [
+    "monthly.2025-11.vol_usd",
+    "monthly.2026-11.vol_usd"
+   ],
    "caveats": [
     [
      "gpt-oss-120b (OpenAI, open-weight)",
-     "USD volume growth is partly due to the near\u2011doubling of the token price."
+     "Volume increase is partly driven by price appreciation."
     ],
     [
-     "DeepSeek-V4-Flash (DeepSeek)",
-     "USD transfer volume can be inflated by token price appreciation, so it may overstate real activity growth."
+     "DeepSeek-V4.1-Flash (DeepSeek)",
+     "USD volume can be inflated by price appreciation and large transfers, so it is not a clean measure of organic activity."
     ],
     [
      "GLM-5.2 (Zhipu)",
-     "USD transfer volume can be inflated by a small number of very large transfers; without distribution data, a few whales could account for most of the increase."
+     "USD volume is a function of both token quantity and price; if price falls, this growth reverses without any change in real transfer activity."
     ],
     [
-     "Qwen3-235B (Alibaba)",
-     "Increased USD volume could be driven by price volatility rather than sustained economic utility."
+     "Qwen3-30B (Alibaba)",
+     "The rise in USD volume may be driven by price appreciation rather than increased real economic activity."
     ]
    ]
   },
   {
    "id": "C5",
    "side": "bear",
-   "claim": "Fees do not pay for security: annual fee revenue is tiny next to the value of new token issuance, so holders are diluted far more than fees return.",
+   "claim": "Gas fees do not pay for security: annual gas fees are tiny next to the value of new token issuance.",
    "votes": {
     "gpt-oss-120b (OpenAI, open-weight)": "SUPPORTED",
-    "DeepSeek-V4-Flash (DeepSeek)": "SUPPORTED",
+    "DeepSeek-V4.1-Flash (DeepSeek)": "SUPPORTED",
     "GLM-5.2 (Zhipu)": "SUPPORTED",
-    "Qwen3-235B (Alibaba)": "SUPPORTED"
+    "Qwen3-30B (Alibaba)": "SUPPORTED"
    },
    "verdict": "SUPPORTED",
    "agreement": "4/4",
    "evidence": [
     {
      "path": "fees.fees_usd_365d",
-     "value": 1205989.00580557,
+     "value": 1170025.19187073,
      "cited_by": 4
     },
     {
      "path": "fees.issuance_usd_365d",
-     "value": 135802851.52226192,
+     "value": 113660913.1733585,
      "cited_by": 4
+    },
+    {
+     "path": "holders.gas_cover_of_issuance_pct",
+     "value": 1.0293997815116775,
+     "cited_by": 2
+    },
+    {
+     "path": "supply.growth_pct",
+     "value": 2.4807636813494627,
+     "cited_by": 1
     }
    ],
    "rejected_citations": [],
    "caveats": [
     [
      "gpt-oss-120b (OpenAI, open-weight)",
-     "Issuance figures assume current price and may change if the token price moves sharply."
+     "Issuance includes supply growth, not all of which is inflationary."
     ],
     [
-     "DeepSeek-V4-Flash (DeepSeek)",
-     "Issued tokens may not all be sold, and fee revenue may undercount other protocol revenue streams."
+     "DeepSeek-V4.1-Flash (DeepSeek)",
+     "The comparison values issuance at current price and does not measure actual security spend."
     ],
     [
      "GLM-5.2 (Zhipu)",
-     "Issuance value is computed at current price; if price falls, the real dilution cost to holders shrinks, narrowing the gap between fees and issuance."
+     "Gas fees are not the only mechanism that could fund security; app-level revenue or buybacks could in principle be redirected, though the data shows they currently are not."
     ],
     [
-     "Qwen3-235B (Alibaba)",
-     "Security may be subsidized by other mechanisms not captured in on-chain fees."
+     "Qwen3-30B (Alibaba)",
+     "The chain may still be secure if issuance is used for long-term incentives or network growth, not just inflation."
     ]
    ]
   },
   {
    "id": "C6",
    "side": "bear",
-   "claim": "The valuation is far ahead of usage: market cap is thousands of times annual fees.",
+   "claim": "Measured against gas fees, the valuation is far ahead of usage: market cap is thousands of times annual gas fees.",
    "votes": {
     "gpt-oss-120b (OpenAI, open-weight)": "SUPPORTED",
-    "DeepSeek-V4-Flash (DeepSeek)": "SUPPORTED",
+    "DeepSeek-V4.1-Flash (DeepSeek)": "SUPPORTED",
     "GLM-5.2 (Zhipu)": "SUPPORTED",
-    "Qwen3-235B (Alibaba)": "SUPPORTED"
+    "Qwen3-30B (Alibaba)": "SUPPORTED"
    },
    "verdict": "SUPPORTED",
    "agreement": "4/4",
    "evidence": [
     {
-     "path": "fees.mcap_to_fees",
-     "value": 4658.623156888404,
-     "cited_by": 4
+     "path": "valuation.mcap_to_gas_fees",
+     "value": 4012.7213958089765,
+     "cited_by": 3
     },
     {
-     "path": "fees.mcap_now",
-     "value": 5618248309.398652,
+     "path": "fees.mcap_to_fees",
+     "value": 4012.7213958089765,
      "cited_by": 2
     },
     {
      "path": "fees.fees_usd_365d",
-     "value": 1205989.00580557,
+     "value": 1170025.19187073,
+     "cited_by": 2
+    },
+    {
+     "path": "fees.mcap_now",
+     "value": 4694985121.055181,
      "cited_by": 2
     }
    ],
-   "rejected_citations": [],
+   "rejected_citations": [
+    "valuation.mcap_to_fees"
+   ],
    "caveats": [
     [
      "gpt-oss-120b (OpenAI, open-weight)",
-     "Market\u2011cap can be influenced by speculative factors unrelated to fee revenue."
+     "Market cap reflects future expectations, not just current security costs."
     ],
     [
-     "DeepSeek-V4-Flash (DeepSeek)",
-     "Market cap reflects future expectations, and current fees may not capture all value accrual."
+     "DeepSeek-V4.1-Flash (DeepSeek)",
+     "Gas fees exclude app and Intents revenue, so the ratio may overstate overvaluation if value accrues elsewhere."
     ],
     [
      "GLM-5.2 (Zhipu)",
-     "Market-cap-to-fees is a point-in-time ratio at a price that has risen sharply (price.yoy_pct is positive); if price reverts, the ratio compresses without any improvement in the fee base."
+     "If app fees rather than gas fees are the correct denominator, the ratio drops to under 80x (valuation.mcap_to_app_fees), which is far less extreme."
     ],
     [
-     "Qwen3-235B (Alibaba)",
-     "High valuation relative to fees may be justified if future growth is expected and realized."
+     "Qwen3-30B (Alibaba)",
+     "Market cap could be justified if future growth in app fees or Intents revenue is expected."
     ]
    ]
   },
@@ -342,26 +372,26 @@
    "claim": "Activity is not a leading indicator of price on NEAR: changes in active accounts barely predict the next quarter's price.",
    "votes": {
     "gpt-oss-120b (OpenAI, open-weight)": "SUPPORTED",
-    "DeepSeek-V4-Flash (DeepSeek)": "SUPPORTED",
+    "DeepSeek-V4.1-Flash (DeepSeek)": "SUPPORTED",
     "GLM-5.2 (Zhipu)": "SUPPORTED",
-    "Qwen3-235B (Alibaba)": "SUPPORTED"
+    "Qwen3-30B (Alibaba)": "SUPPORTED"
    },
    "verdict": "SUPPORTED",
    "agreement": "4/4",
    "evidence": [
     {
      "path": "lead.corr_active_change_vs_next_3m_price",
-     "value": 0.17049431511229005,
+     "value": 0.1551697643829994,
      "cited_by": 4
     },
     {
      "path": "level_corr.corr_active_vs_price_monthly",
-     "value": 0.1336708476840631,
-     "cited_by": 2
+     "value": 0.13279762063047992,
+     "cited_by": 3
     },
     {
      "path": "lead.n_months",
-     "value": 54,
+     "value": 55,
      "cited_by": 1
     }
    ],
@@ -369,19 +399,19 @@
    "caveats": [
     [
      "gpt-oss-120b (OpenAI, open-weight)",
-     "Correlation does not prove causation and may shift in different market regimes."
+     "Correlation measured over a limited period; other lag structures may exist."
     ],
     [
-     "DeepSeek-V4-Flash (DeepSeek)",
-     "The relationship could be nonlinear or operate over different horizons than the 3-month lead tested."
+     "DeepSeek-V4.1-Flash (DeepSeek)",
+     "A weak historical correlation does not rule out predictive power at other horizons or in nonlinear relationships."
     ],
     [
      "GLM-5.2 (Zhipu)",
-     "A Pearson correlation of 0.17 over 54 months has a wide confidence interval; the relationship could be nonlinear or conditional on regime, which a single linear correlation would miss."
+     "Low correlation does not rule out a non-linear or lagged relationship that this specific Pearson test over a 3-month horizon would miss."
     ],
     [
-     "Qwen3-235B (Alibaba)",
-     "A weak correlation does not rule out non-linear or delayed predictive relationships."
+     "Qwen3-30B (Alibaba)",
+     "Low correlation may reflect noise or structural changes in how price is driven, not a lack of predictive power."
     ]
    ]
   },
@@ -391,26 +421,26 @@
    "claim": "Supply inflation is modest: total supply grew only a few percent in the last year.",
    "votes": {
     "gpt-oss-120b (OpenAI, open-weight)": "SUPPORTED",
-    "DeepSeek-V4-Flash (DeepSeek)": "SUPPORTED",
+    "DeepSeek-V4.1-Flash (DeepSeek)": "SUPPORTED",
     "GLM-5.2 (Zhipu)": "SUPPORTED",
-    "Qwen3-235B (Alibaba)": "SUPPORTED"
+    "Qwen3-30B (Alibaba)": "SUPPORTED"
    },
    "verdict": "SUPPORTED",
    "agreement": "4/4",
    "evidence": [
     {
      "path": "supply.growth_pct",
-     "value": 2.4768986189897424,
+     "value": 2.4807636813494627,
      "cited_by": 4
     },
     {
      "path": "supply.total_now",
-     "value": 1310472976.2021549,
+     "value": 1311293172.4180355,
      "cited_by": 1
     },
     {
      "path": "supply.total_year_ago",
-     "value": 1278798435.4156814,
+     "value": 1279550547.159592,
      "cited_by": 1
     }
    ],
@@ -418,112 +448,127 @@
    "caveats": [
     [
      "gpt-oss-120b (OpenAI, open-weight)",
-     "Even modest supply growth can be dilutive if demand does not keep pace."
+     "Even modest inflation can erode value if demand doesn\u2019t keep pace."
     ],
     [
-     "DeepSeek-V4-Flash (DeepSeek)",
-     "Even modest supply growth can be large relative to fee revenue, as seen in the fee versus issuance comparison."
+     "DeepSeek-V4.1-Flash (DeepSeek)",
+     "Supply growth can change and does not account for buybacks or burns outside the total supply series."
     ],
     [
      "GLM-5.2 (Zhipu)",
-     "Supply growth of 2.48% is modest in percentage terms, but the dollar value of that issuance (fees.issuance_usd_365d) is over 100x annual fee revenue, so the absolute dilution is still large relative to the chain's own revenue."
+     "A low percentage growth rate on a large supply base still produces over $100M in new token value (fees.issuance_usd_365d), which matters for dilution."
     ],
     [
-     "Qwen3-235B (Alibaba)",
-     "Modest supply growth could still be dilutive if not matched by demand growth."
+     "Qwen3-30B (Alibaba)",
+     "Modest supply growth may not be sustainable if future issuance increases or demand remains weak."
     ]
    ]
   },
   {
    "id": "C9",
-   "side": "bull",
-   "claim": "Transfer value grew even after removing the price rise: transfer volume measured in NEAR tokens is above a year ago.",
+   "side": "bear",
+   "claim": "Most of the growth in dollar transfer volume is the price rise: counted in NEAR tokens, transfer volume is only slightly above a year ago.",
    "votes": {
     "gpt-oss-120b (OpenAI, open-weight)": "SUPPORTED",
-    "DeepSeek-V4-Flash (DeepSeek)": "SUPPORTED",
+    "DeepSeek-V4.1-Flash (DeepSeek)": "SUPPORTED",
     "GLM-5.2 (Zhipu)": "SUPPORTED",
-    "Qwen3-235B (Alibaba)": "SUPPORTED"
+    "Qwen3-30B (Alibaba)": "SUPPORTED"
    },
    "verdict": "SUPPORTED",
    "agreement": "4/4",
    "evidence": [
     {
-     "path": "vol_near.yoy_pct",
-     "value": 56.359336491424436,
+     "path": "paradox.share_of_usd_growth_from_price",
+     "value": 0.8655539337840573,
      "cited_by": 4
     },
     {
-     "path": "vol_near.avg_30d",
-     "value": 50095531.73832515,
-     "cited_by": 2
+     "path": "vol_near.yoy_pct",
+     "value": 9.545721626481129,
+     "cited_by": 4
     },
     {
-     "path": "vol_near.avg_30d_year_ago",
-     "value": 32038721.10385468,
-     "cited_by": 2
+     "path": "vol_usd.yoy_pct",
+     "value": 125.43516824020125,
+     "cited_by": 3
+    },
+    {
+     "path": "price.yoy_pct",
+     "value": 102.09673306654672,
+     "cited_by": 1
+    },
+    {
+     "path": "paradox.near_volume_x",
+     "value": 1.0954572162648113,
+     "cited_by": 1
+    },
+    {
+     "path": "paradox.share_of_usd_growth_from_near_moved",
+     "value": 0.11216144568457834,
+     "cited_by": 1
     }
    ],
    "rejected_citations": [],
    "caveats": [
     [
      "gpt-oss-120b (OpenAI, open-weight)",
-     "Higher token\u2011denominated volume could be a price effect rather than genuine usage growth."
+     "Share calculations are based on means and may not capture all dynamics."
     ],
     [
-     "DeepSeek-V4-Flash (DeepSeek)",
-     "NEAR-denominated volume can still be affected by token price volatility and may not reflect stable economic value."
+     "DeepSeek-V4.1-Flash (DeepSeek)",
+     "The decomposition uses 30-day means and may be sensitive to outliers or price measurement."
     ],
     [
      "GLM-5.2 (Zhipu)",
-     "NEAR-denominated volume rising while USD-denominated volume also rose (vol_usd.yoy_pct) is consistent, but if transfer volume is concentrated in a few large transactions, the growth may not reflect broad-based economic activity."
+     "The decomposition uses log-shares that do not sum to exactly one, so the attribution is approximate rather than exact."
     ],
     [
-     "Qwen3-235B (Alibaba)",
-     "Increased NEAR-denominated volume may reflect speculation rather than real usage growth."
+     "Qwen3-30B (Alibaba)",
+     "The share of growth from price may be misleading if NEAR's utility is increasing despite low volume in NEAR terms."
     ]
    ]
   },
   {
    "id": "C10",
    "side": "bull",
-   "claim": "Real usage moved to cross-chain swaps: NEAR Intents swap count and USD volume are higher now than a year ago, while account counts fell.",
+   "claim": "Real usage moved to cross-chain swaps: NEAR Intents fees are well above a year ago, while account counts fell.",
    "votes": {
-    "gpt-oss-120b (OpenAI, open-weight)": "MIXED",
-    "DeepSeek-V4-Flash (DeepSeek)": "MIXED",
-    "GLM-5.2 (Zhipu)": "MIXED",
-    "Qwen3-235B (Alibaba)": "MIXED"
+    "gpt-oss-120b (OpenAI, open-weight)": "SUPPORTED",
+    "DeepSeek-V4.1-Flash (DeepSeek)": "SUPPORTED",
+    "GLM-5.2 (Zhipu)": "SUPPORTED",
+    "Qwen3-30B (Alibaba)": "SUPPORTED"
    },
-   "verdict": "MIXED",
+   "verdict": "SUPPORTED",
    "agreement": "4/4",
    "evidence": [
     {
-     "path": "intents.swaps_change_pct",
-     "value": 18.020649088889805,
+     "path": "intents_daily.fees_yoy_pct",
+     "value": 51.323612579222825,
      "cited_by": 4
     },
     {
-     "path": "intents.usd_change_pct",
-     "value": -10.551857151117993,
-     "cited_by": 4
+     "path": "intents_daily.revenue_yoy_pct",
+     "value": 334.3491463342589,
+     "cited_by": 3
     },
     {
      "path": "active.yoy_pct",
-     "value": -73.5130378393887,
+     "value": -77.85976353674498,
+     "cited_by": 3
+    },
+    {
+     "path": "intents.swaps_change_pct",
+     "value": 17.088972070256258,
      "cited_by": 2
     },
     {
-     "path": "intents.swaps_first4",
-     "value": 12155.5,
+     "path": "apps.intents_share_30d",
+     "value": 0.8735201450950878,
      "cited_by": 1
     },
     {
-     "path": "intents.swaps_last4",
-     "value": 14346,
-     "cited_by": 1
-    },
-    {
-     "path": "intents.usd_first4",
-     "value": 34987110.982700184,
+     "path": "intents.usd_change_pct",
+     "value": -16.454916173458244,
      "cited_by": 1
     }
    ],
@@ -531,46 +576,663 @@
    "caveats": [
     [
      "gpt-oss-120b (OpenAI, open-weight)",
-     "Swap count rose but USD volume fell, so the claim is only partially true."
+     "Intents represent only one type of activity; overall usage may still be declining."
     ],
     [
-     "DeepSeek-V4-Flash (DeepSeek)",
-     "The first and last four sampled Sundays may be noisy, and USD volume changes are sensitive to token price."
+     "DeepSeek-V4.1-Flash (DeepSeek)",
+     "Intents fee growth may reflect fee mix or pricing, and sampled swap USD volume actually fell."
     ],
     [
      "GLM-5.2 (Zhipu)",
-     "The claim asserts USD volume is higher, but intents.usd_change_pct is negative (-10.5519); swap count rose while USD value per swap fell (intents.usd_per_swap_last4 is lower than the first-4 average), so the volume growth is in low-value swaps."
+     "Intents fee growth could be driven by a temporary surge in cross-chain arbitrage rather than durable user adoption."
     ],
     [
-     "Qwen3-235B (Alibaba)",
-     "Swap count rose but USD volume fell, suggesting more small or low-value swaps, not necessarily stronger real usage."
+     "Qwen3-30B (Alibaba)",
+     "Growth in Intents fees may be temporary or driven by a single protocol, not broad ecosystem adoption."
+    ]
+   ]
+  },
+  {
+   "id": "C11",
+   "side": "bull",
+   "claim": "Gas fees are the wrong yardstick: users pay the apps on NEAR many times more than they pay the chain, and that total is growing.",
+   "votes": {
+    "gpt-oss-120b (OpenAI, open-weight)": "SUPPORTED",
+    "DeepSeek-V4.1-Flash (DeepSeek)": "SUPPORTED",
+    "GLM-5.2 (Zhipu)": "SUPPORTED",
+    "Qwen3-30B (Alibaba)": "SUPPORTED"
+   },
+   "verdict": "SUPPORTED",
+   "agreement": "4/4",
+   "evidence": [
+    {
+     "path": "apps.x_gas_fees",
+     "value": 50.678703186889365,
+     "cited_by": 4
+    },
+    {
+     "path": "apps.fees_yoy_pct",
+     "value": 46.87762610039399,
+     "cited_by": 4
+    },
+    {
+     "path": "fees.fees_usd_365d",
+     "value": 1170025.19187073,
+     "cited_by": 2
+    },
+    {
+     "path": "apps.fees_usd_365d",
+     "value": 59295359.42,
+     "cited_by": 1
+    },
+    {
+     "path": "apps.fees_avg_30d",
+     "value": 222284.20766666665,
+     "cited_by": 1
+    },
+    {
+     "path": "intents_daily.fees_yoy_pct",
+     "value": 51.323612579222825,
+     "cited_by": 1
+    }
+   ],
+   "rejected_citations": [],
+   "caveats": [
+    [
+     "gpt-oss-120b (OpenAI, open-weight)",
+     "App fees include many services; a high ratio doesn\u2019t imply security is cheap."
+    ],
+    [
+     "DeepSeek-V4.1-Flash (DeepSeek)",
+     "App fees are concentrated in Intents and may not accrue to NEAR holders."
+    ],
+    [
+     "GLM-5.2 (Zhipu)",
+     "App fees are gross user charges, not all of which accrue to NEAR token holders; only the kept share (intents_daily.kept_share_30d) flows back."
+    ],
+    [
+     "Qwen3-30B (Alibaba)",
+     "The app fee growth may be concentrated in a few protocols, not representative of overall user spending."
+    ]
+   ]
+  },
+  {
+   "id": "C12",
+   "side": "bull",
+   "claim": "Holders now get paid: the NEAR Intents revenue that NEAR keeps is used to buy back the token, and it is several times higher than a year ago.",
+   "votes": {
+    "gpt-oss-120b (OpenAI, open-weight)": "SUPPORTED",
+    "DeepSeek-V4.1-Flash (DeepSeek)": "SUPPORTED",
+    "GLM-5.2 (Zhipu)": "SUPPORTED",
+    "Qwen3-30B (Alibaba)": "SUPPORTED"
+   },
+   "verdict": "SUPPORTED",
+   "agreement": "4/4",
+   "evidence": [
+    {
+     "path": "intents_daily.revenue_yoy_pct",
+     "value": 334.3491463342589,
+     "cited_by": 3
+    },
+    {
+     "path": "holders.annualised",
+     "value": 22364912.666666664,
+     "cited_by": 3
+    },
+    {
+     "path": "intents_daily.revenue_avg_30d",
+     "value": 61268.566666666666,
+     "cited_by": 2
+    },
+    {
+     "path": "intents_daily.revenue_avg_30d_year_ago",
+     "value": 14105.833333333334,
+     "cited_by": 2
+    },
+    {
+     "path": "holders.usd_since_first_day",
+     "value": 7950643.21,
+     "cited_by": 2
+    },
+    {
+     "path": "holders.avg_30d",
+     "value": 61273.73333333333,
+     "cited_by": 1
+    }
+   ],
+   "rejected_citations": [],
+   "caveats": [
+    [
+     "gpt-oss-120b (OpenAI, open-weight)",
+     "Revenue may not be fully used for buybacks or may not translate to price support."
+    ],
+    [
+     "DeepSeek-V4.1-Flash (DeepSeek)",
+     "The buyback program is recent and small relative to market cap and issuance, so 'get paid' may overstate holder cash flow."
+    ],
+    [
+     "GLM-5.2 (Zhipu)",
+     "The buyback program only started in February 2026 (holders.days = 260), so the year-ago comparison for revenue reflects a period before buybacks existed, making the growth partly mechanical."
+    ],
+    [
+     "Qwen3-30B (Alibaba)",
+     "Buybacks may be unsustainable if revenue growth slows or token price drops."
+    ]
+   ]
+  },
+  {
+   "id": "C13",
+   "side": "bear",
+   "claim": "It is a one-product economy: almost all app fees on NEAR come from NEAR Intents, and few other apps earn meaningful fees.",
+   "votes": {
+    "gpt-oss-120b (OpenAI, open-weight)": "SUPPORTED",
+    "DeepSeek-V4.1-Flash (DeepSeek)": "SUPPORTED",
+    "GLM-5.2 (Zhipu)": "SUPPORTED",
+    "Qwen3-30B (Alibaba)": "SUPPORTED"
+   },
+   "verdict": "SUPPORTED",
+   "agreement": "4/4",
+   "evidence": [
+    {
+     "path": "apps.intents_share_30d",
+     "value": 0.8735201450950878,
+     "cited_by": 4
+    },
+    {
+     "path": "apps.protocols_over_100_usd_a_day",
+     "value": 4,
+     "cited_by": 4
+    },
+    {
+     "path": "apps.fees_avg_30d",
+     "value": 222284.20766666665,
+     "cited_by": 2
+    },
+    {
+     "path": "intents_daily.fees_avg_30d",
+     "value": 194169.73333333334,
+     "cited_by": 2
+    },
+    {
+     "path": "apps.intents_share_30d_year_ago",
+     "value": 0.8478555532453254,
+     "cited_by": 1
+    }
+   ],
+   "rejected_citations": [],
+   "caveats": [
+    [
+     "gpt-oss-120b (OpenAI, open-weight)",
+     "A small number of other apps could grow rapidly in the future."
+    ],
+    [
+     "DeepSeek-V4.1-Flash (DeepSeek)",
+     "Fee share does not capture non-fee economic activity or apps with revenue outside fees."
+    ],
+    [
+     "GLM-5.2 (Zhipu)",
+     "Four protocols over $100/day is a snapshot; new apps could be emerging that have not yet crossed that threshold but may diversify the ecosystem soon."
+    ],
+    [
+     "Qwen3-30B (Alibaba)",
+     "The dominance of Intents may be due to a recent launch or marketing push, not long-term ecosystem health."
+    ]
+   ]
+  },
+  {
+   "id": "C14",
+   "side": "bear",
+   "claim": "Even counting buybacks, holders are still diluted and the price is rich: buybacks cover only a minority of new issuance, and market cap is hundreds of times that revenue.",
+   "votes": {
+    "gpt-oss-120b (OpenAI, open-weight)": "SUPPORTED",
+    "DeepSeek-V4.1-Flash (DeepSeek)": "SUPPORTED",
+    "GLM-5.2 (Zhipu)": "SUPPORTED",
+    "Qwen3-30B (Alibaba)": "SUPPORTED"
+   },
+   "verdict": "SUPPORTED",
+   "agreement": "4/4",
+   "evidence": [
+    {
+     "path": "holders.cover_of_issuance_pct",
+     "value": 19.676872235361277,
+     "cited_by": 4
+    },
+    {
+     "path": "valuation.mcap_to_intents_revenue_annualised",
+     "value": 209.94408118569373,
+     "cited_by": 3
+    },
+    {
+     "path": "holders.mcap_to_annualised",
+     "value": 209.92637847643942,
+     "cited_by": 2
+    },
+    {
+     "path": "fees.issuance_usd_365d",
+     "value": 113660913.1733585,
+     "cited_by": 2
+    },
+    {
+     "path": "holders.annualised",
+     "value": 22364912.666666664,
+     "cited_by": 2
+    }
+   ],
+   "rejected_citations": [
+    "valuation.mcap_to_annualised"
+   ],
+   "caveats": [
+    [
+     "gpt-oss-120b (OpenAI, open-weight)",
+     "Future revenue growth could improve coverage and lower valuation multiples."
+    ],
+    [
+     "DeepSeek-V4.1-Flash (DeepSeek)",
+     "Buyback coverage uses annualised recent revenue and issuance value at current price, both of which can change."
+    ],
+    [
+     "GLM-5.2 (Zhipu)",
+     "If Intents revenue continues its 334% YoY growth trajectory, coverage of issuance could rise rapidly and the valuation multiple could compress quickly."
+    ],
+    [
+     "Qwen3-30B (Alibaba)",
+     "Holders may still benefit if buybacks are reinvested or if future revenue grows faster than issuance."
+    ]
+   ]
+  },
+  {
+   "id": "C15",
+   "side": "neutral",
+   "claim": "The numbers can be trusted: a second, independent provider reports the same gas fees as the first.",
+   "votes": {
+    "gpt-oss-120b (OpenAI, open-weight)": "SUPPORTED",
+    "DeepSeek-V4.1-Flash (DeepSeek)": "SUPPORTED",
+    "GLM-5.2 (Zhipu)": "SUPPORTED",
+    "Qwen3-30B (Alibaba)": "SUPPORTED"
+   },
+   "verdict": "SUPPORTED",
+   "agreement": "4/4",
+   "evidence": [
+    {
+     "path": "crosscheck.gas_fees_diff_pct",
+     "value": 0.030923105911218052,
+     "cited_by": 4
+    },
+    {
+     "path": "crosscheck.price_diff_pct",
+     "value": 1.0566592045790912e-08,
+     "cited_by": 3
+    },
+    {
+     "path": "crosscheck.gas_fee_days_compared",
+     "value": 365,
+     "cited_by": 2
+    },
+    {
+     "path": "crosscheck.price_days_compared",
+     "value": 30,
+     "cited_by": 1
+    }
+   ],
+   "rejected_citations": [],
+   "caveats": [
+    [
+     "gpt-oss-120b (OpenAI, open-weight)",
+     "Only gas\u2011fee data were cross\u2011checked; other metrics may still differ between providers."
+    ],
+    [
+     "DeepSeek-V4.1-Flash (DeepSeek)",
+     "Agreement on gas fees and price does not validate all other metrics or their methodology."
+    ],
+    [
+     "GLM-5.2 (Zhipu)",
+     "Agreement on gas fees and price does not guarantee agreement on active-account or transaction counts, which come from only one provider."
+    ],
+    [
+     "Qwen3-30B (Alibaba)",
+     "Cross-checks may not catch systematic biases in data collection or reporting delays."
+    ]
+   ]
+  },
+  {
+   "id": "C16",
+   "side": "bull",
+   "claim": "NEAR is already deflationary: buybacks and burned fees outweigh new issuance.",
+   "votes": {
+    "gpt-oss-120b (OpenAI, open-weight)": "CONTRADICTED",
+    "DeepSeek-V4.1-Flash (DeepSeek)": "CONTRADICTED",
+    "GLM-5.2 (Zhipu)": "CONTRADICTED",
+    "Qwen3-30B (Alibaba)": "NOT_TESTABLE"
+   },
+   "verdict": "CONTRADICTED",
+   "agreement": "3/4",
+   "evidence": [
+    {
+     "path": "holders.cover_of_issuance_pct",
+     "value": 19.676872235361277,
+     "cited_by": 3
+    },
+    {
+     "path": "fees.issuance_usd_365d",
+     "value": 113660913.1733585,
+     "cited_by": 3
+    },
+    {
+     "path": "fees.fees_usd_365d",
+     "value": 1170025.19187073,
+     "cited_by": 2
+    },
+    {
+     "path": "supply.growth_pct",
+     "value": 2.4807636813494627,
+     "cited_by": 1
+    },
+    {
+     "path": "supply.total_now",
+     "value": 1311293172.4180355,
+     "cited_by": 1
+    },
+    {
+     "path": "supply.total_year_ago",
+     "value": 1279550547.159592,
+     "cited_by": 1
+    }
+   ],
+   "rejected_citations": [],
+   "caveats": [
+    [
+     "gpt-oss-120b (OpenAI, open-weight)",
+     "Burned fees are not quantified; they could offset issuance but are not shown here."
+    ],
+    [
+     "DeepSeek-V4.1-Flash (DeepSeek)",
+     "Total supply may already net some burns, but the provided series shows growth rather than deflation."
+    ],
+    [
+     "GLM-5.2 (Zhipu)",
+     "If burned fees or other mechanisms not captured in these metrics exist, the net inflation picture could differ, but no such data is provided here."
+    ],
+    [
+     "Qwen3-30B (Alibaba)",
+     "Data on burned fees and buybacks is not available to confirm net supply change."
+    ]
+   ]
+  },
+  {
+   "id": "C17",
+   "side": "bear",
+   "claim": "NEAR is a ghost chain: almost nobody pays to use anything on it.",
+   "votes": {
+    "gpt-oss-120b (OpenAI, open-weight)": "MIXED",
+    "DeepSeek-V4.1-Flash (DeepSeek)": "CONTRADICTED",
+    "GLM-5.2 (Zhipu)": "CONTRADICTED",
+    "Qwen3-30B (Alibaba)": "SUPPORTED"
+   },
+   "verdict": "SPLIT",
+   "agreement": "2/4",
+   "evidence": [
+    {
+     "path": "apps.fees_avg_30d",
+     "value": 222284.20766666665,
+     "cited_by": 3
+    },
+    {
+     "path": "intents_daily.fees_avg_30d",
+     "value": 194169.73333333334,
+     "cited_by": 3
+    },
+    {
+     "path": "active.avg_30d",
+     "value": 58222.73333333333,
+     "cited_by": 2
+    },
+    {
+     "path": "fees.fees_usd_365d",
+     "value": 1170025.19187073,
+     "cited_by": 1
+    },
+    {
+     "path": "apps.x_gas_fees",
+     "value": 50.678703186889365,
+     "cited_by": 1
+    },
+    {
+     "path": "txns.avg_30d",
+     "value": 662519.5666666667,
+     "cited_by": 1
+    }
+   ],
+   "rejected_citations": [],
+   "caveats": [
+    [
+     "gpt-oss-120b (OpenAI, open-weight)",
+     "While on\u2011chain gas fees are low, app fees indicate users do pay for services."
+    ],
+    [
+     "DeepSeek-V4.1-Flash (DeepSeek)",
+     "Activity is far below peak and concentrated in Intents, so 'ghost chain' may be rhetorical rather than literal."
+    ],
+    [
+     "GLM-5.2 (Zhipu)",
+     "While fees are meaningful in aggregate, they are concentrated in a single product and a small user base, so 'ghost chain' is wrong on revenue but partially right on breadth."
+    ],
+    [
+     "Qwen3-30B (Alibaba)",
+     "Low chain fees may reflect high app-level fees, not lack of usage, if users are paying apps instead of gas."
+    ]
+   ]
+  },
+  {
+   "id": "C18",
+   "side": "bull",
+   "claim": "Stablecoin liquidity on NEAR is growing alongside NEAR Intents.",
+   "votes": {
+    "gpt-oss-120b (OpenAI, open-weight)": "CONTRADICTED",
+    "DeepSeek-V4.1-Flash (DeepSeek)": "CONTRADICTED",
+    "GLM-5.2 (Zhipu)": "CONTRADICTED",
+    "Qwen3-30B (Alibaba)": "SUPPORTED"
+   },
+   "verdict": "CONTRADICTED",
+   "agreement": "3/4",
+   "evidence": [
+    {
+     "path": "stables.yoy_pct",
+     "value": -43.56091479486736,
+     "cited_by": 4
+    },
+    {
+     "path": "stables.avg_30d",
+     "value": 129098830.56666666,
+     "cited_by": 2
+    },
+    {
+     "path": "stables.avg_30d_year_ago",
+     "value": 228740118.83333334,
+     "cited_by": 2
+    },
+    {
+     "path": "intents_daily.fees_yoy_pct",
+     "value": 51.323612579222825,
+     "cited_by": 1
+    },
+    {
+     "path": "tvl.yoy_pct",
+     "value": 44.15705262737588,
+     "cited_by": 1
+    },
+    {
+     "path": "dex.yoy_pct",
+     "value": 22.63487557008965,
+     "cited_by": 1
+    }
+   ],
+   "rejected_citations": [],
+   "caveats": [
+    [
+     "gpt-oss-120b (OpenAI, open-weight)",
+     "Stablecoin metrics may lag or be measured differently across sources."
+    ],
+    [
+     "DeepSeek-V4.1-Flash (DeepSeek)",
+     "Stablecoin averages can be affected by a few large holders or migrations, but the provided trend is negative."
+    ],
+    [
+     "GLM-5.2 (Zhipu)",
+     "Stablecoin supply could lag Intents growth if users route through cross-chain swaps without parking stablecoins on NEAR, so the contradiction may narrow in coming months."
+    ],
+    [
+     "Qwen3-30B (Alibaba)",
+     "Growth in stablecoin volume may be due to speculative activity rather than real DeFi usage."
+    ]
+   ]
+  },
+  {
+   "id": "C19",
+   "side": "bear",
+   "claim": "DeFi on NEAR is shrinking: value locked and exchange volume are below a year ago.",
+   "votes": {
+    "gpt-oss-120b (OpenAI, open-weight)": "CONTRADICTED",
+    "DeepSeek-V4.1-Flash (DeepSeek)": "CONTRADICTED",
+    "GLM-5.2 (Zhipu)": "CONTRADICTED",
+    "Qwen3-30B (Alibaba)": "SUPPORTED"
+   },
+   "verdict": "CONTRADICTED",
+   "agreement": "3/4",
+   "evidence": [
+    {
+     "path": "tvl.yoy_pct",
+     "value": 44.15705262737588,
+     "cited_by": 4
+    },
+    {
+     "path": "dex.yoy_pct",
+     "value": 22.63487557008965,
+     "cited_by": 4
+    },
+    {
+     "path": "stables.yoy_pct",
+     "value": -43.56091479486736,
+     "cited_by": 2
+    },
+    {
+     "path": "tvl.avg_30d",
+     "value": 213061627.8,
+     "cited_by": 1
+    },
+    {
+     "path": "dex.avg_30d",
+     "value": 134159518.04733333,
+     "cited_by": 1
+    }
+   ],
+   "rejected_citations": [],
+   "caveats": [
+    [
+     "gpt-oss-120b (OpenAI, open-weight)",
+     "TVL and DEX volume are increasing, though other DeFi metrics could be declining."
+    ],
+    [
+     "DeepSeek-V4.1-Flash (DeepSeek)",
+     "TVL and DEX volume can be price-inflated, and stablecoin liquidity is down."
+    ],
+    [
+     "GLM-5.2 (Zhipu)",
+     "TVL and DEX volume grew, but stablecoin liquidity shrank (stables.yoy_pct), so the DeFi ecosystem is shifting in composition even if it is not uniformly shrinking."
+    ],
+    [
+     "Qwen3-30B (Alibaba)",
+     "Tvl and dex volume may be inflated by synthetic assets or leveraged positions."
+    ]
+   ]
+  },
+  {
+   "id": "C20",
+   "side": "control",
+   "claim": "Daily transactions on NEAR are higher than a year ago.",
+   "votes": {
+    "gpt-oss-120b (OpenAI, open-weight)": "CONTRADICTED",
+    "DeepSeek-V4.1-Flash (DeepSeek)": "CONTRADICTED",
+    "GLM-5.2 (Zhipu)": "CONTRADICTED",
+    "Qwen3-30B (Alibaba)": "CONTRADICTED"
+   },
+   "verdict": "CONTRADICTED",
+   "agreement": "4/4",
+   "evidence": [
+    {
+     "path": "txns.yoy_pct",
+     "value": -85.09279071824083,
+     "cited_by": 4
+    },
+    {
+     "path": "txns.avg_30d",
+     "value": 662519.5666666667,
+     "cited_by": 2
+    },
+    {
+     "path": "txns.avg_30d_year_ago",
+     "value": 4444289.7,
+     "cited_by": 2
+    },
+    {
+     "path": "w90.txns.yoy_pct",
+     "value": -84.11775649032391,
+     "cited_by": 1
+    },
+    {
+     "path": "monthly.2025-11.txns",
+     "value": 4267747.566666666,
+     "cited_by": 1
+    },
+    {
+     "path": "monthly.2026-11.txns",
+     "value": 676566.4444444445,
+     "cited_by": 1
+    }
+   ],
+   "rejected_citations": [],
+   "caveats": [
+    [
+     "gpt-oss-120b (OpenAI, open-weight)",
+     "Daily transaction counts are averaged; occasional peaks may exist but are not reflected in the mean."
+    ],
+    [
+     "DeepSeek-V4.1-Flash (DeepSeek)",
+     "Transaction counts can be affected by batching or spam changes, but the measured trend is lower."
+    ],
+    [
+     "GLM-5.2 (Zhipu)",
+     "This is a control claim and is clearly false; the only way it could be true is if a different transaction definition were used, but the provided data is unambiguous."
+    ],
+    [
+     "Qwen3-30B (Alibaba)",
+     "The claim may be true if it refers to a different metric (e.g. total transactions including non-user activity), but daily user txns are down."
     ]
    ]
   }
  ],
  "theses": {
   "gpt-oss-120b (OpenAI, open-weight)": {
-   "thesis": "The evidence points to a severe contraction in active accounts and transaction counts on NEAR, while fee revenue per user and transfer volume per active have modestly improved; however, the market cap is many times annual fees, indicating that price is outpacing on\u2011chain economic activity and raising concerns about long\u2011term sustainability.",
-   "would_change_my_mind": "If annual fee revenue grew to exceed 10% of market cap (fees.mcap_to_fees dropping below 10), indicating that usage is now funding security at a level comparable to valuation."
+   "thesis": "The data show a stark collapse in active accounts and transaction volume on NEAR, while the modest supply growth and high market\u2011cap multiples indicate that valuation is far outpacing genuine on\u2011chain usage; the ecosystem is heavily reliant on a single product (Intents) and app fees dwarf gas fees, suggesting limited sustainable demand.",
+   "would_change_my_mind": "If 30\u2011day average daily active accounts and transaction counts both rose by more than 50% year\u2011over\u2011year while gas\u2011fee revenue and app\u2011fee revenue remained low, indicating a genuine resurgence of core usage."
   },
-  "DeepSeek-V4-Flash (DeepSeek)": {
-   "thesis": "The evidence best supports a bearish long-term case: user activity, new accounts, and active contracts have collapsed, fee revenue is negligible relative to token issuance and market cap, and the remaining usage does not justify the valuation. Transfer volume growth and modest supply inflation are positive, but they appear disconnected from sustainable on-chain participation and fee generation.",
-   "would_change_my_mind": "A sustained reversal in active accounts and new account creation, with active.yoy_pct and new_acc.yoy_pct turning positive, combined with annual fees growing to a meaningful share of issuance, would change my mind."
+  "DeepSeek-V4.1-Flash (DeepSeek)": {
+   "thesis": "The evidence supports a bearish long-term case for NEAR as a general-purpose chain: core active accounts, transactions, new accounts, and active contracts have collapsed, gas fees are tiny versus issuance, and market cap is extremely high relative to gas fees. The main offset is NEAR Intents, where app fees and retained revenue are growing and buybacks have started, but that activity is concentrated, stablecoin liquidity is shrinking, and buybacks cover only a minority of issuance.",
+   "would_change_my_mind": "A sustained multi-month increase in active accounts and transactions alongside broadening app-fee growth beyond NEAR Intents and stablecoin liquidity growth."
   },
   "GLM-5.2 (Zhipu)": {
-   "thesis": "The evidence supports a bearish long-term case: NEAR's on-chain usage has collapsed across every activity metric (active accounts -73.5%, transactions -84.2%, new accounts -96.2%, active contracts -97.8%) while its price nearly doubled, and annual fee revenue ($1.2M) is negligible against both its $5.6B market cap (4659x) and $135.8M annual issuance, meaning holders are diluted far more than fees return. Although transfer volume and fee-per-active have risen, suggesting the remaining usage is higher-value, the near-zero correlation between activity changes and subsequent price (lead.corr_active_change_vs_next_3m_price = 0.17) indicates the token's appreciation is disconnected from on-chain adoption, making the valuation fragile.",
-   "would_change_my_mind": "A sustained recovery in monthly active accounts above 150,000 for at least three consecutive months alongside rising monthly fee revenue, demonstrating that organic, fee-generating adoption is resuming rather than merely larger transfers among a shrinking user base."
+   "thesis": "NEAR's core on-chain usage has collapsed\u2014active accounts and transactions are down 78\u201385% year-over-year and 97% from peak\u2014yet the surviving activity is far more economically valuable per account, driven almost entirely by NEAR Intents, which generates growing fees (up 51% YoY), revenue (up 334% YoY), and token buybacks. The bull case rests on Intents becoming a durable cross-chain revenue engine, but the chain is a one-product economy (87% of app fees from Intents, only four protocols over $100/day), buybacks cover only a fifth of new issuance, and the market cap is hundreds of times annualized Intents revenue, making the setup fragile and richly valued.",
+   "would_change_my_mind": "A sustained six-month recovery in monthly active accounts back above 200,000 (monthly.2025-11.active level) combined with apps.intents_share_30d falling below 0.50, indicating diversified organic adoption rather than single-product dependence."
   },
-  "Qwen3-235B (Alibaba)": {
-   "thesis": "The evidence supports a bearish long-term case: NEAR's core usage metrics have collapsed year-over-year, with active accounts, transactions, and new accounts down over 70%, suggesting a loss of organic network activity. While USD transfer volume and value per user have increased, these gains are overshadowed by the scale of user attrition and a valuation that is extremely high relative to fee revenue.",
-   "would_change_my_mind": "Sustained growth in active accounts and transaction volume over the next 6 months, with fee revenue growing faster than issuance, would indicate a recovery in organic demand and economic sustainability."
+  "Qwen3-30B (Alibaba)": {
+   "thesis": "NEAR's ecosystem is undergoing a structural shift: user activity has declined sharply, but economic value per user has increased, driven by NEAR Intents and app fees. The chain is becoming more efficient and valuable per transaction, with growing app-level revenue and buybacks, though it remains highly dependent on a single product and faces challenges in sustaining growth amid low on-chain usage and modest supply inflation.",
+   "would_change_my_mind": "If daily active accounts and transaction volume show sustained growth over the next 6 months, while app fees and Intents revenue continue to rise, it would indicate a recovery in organic user adoption."
   }
  },
  "failed_judges": [],
  "raw": {
-  "gpt-oss-120b (OpenAI, open-weight)": "{\n  \"claims\": [\n    {\n      \"id\": \"C1\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"active.yoy_pct\", \"txns.yoy_pct\"],\n      \"caveat\": \"The metrics are averages over 30 days and may not capture short\u2011term spikes in usage.\"\n    },\n    {\n      \"id\": \"C2\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"fee_per_active.now\", \"fee_per_active.year_ago\", \"vol_usd.yoy_pct\"],\n      \"caveat\": \"Higher fees per active could be driven by a few large transactions rather than broad economic activity.\"\n    },\n    {\n      \"id\": \"C3\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"new_acc.yoy_pct\", \"active_contracts.yoy_pct\", \"active_peak.current_vs_peak_pct\"],\n      \"caveat\": \"The drop may also reflect a natural market cycle rather than solely inflated past activity.\"\n    },\n    {\n      \"id\": \"C4\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"vol_usd.yoy_pct\"],\n      \"caveat\": \"USD volume growth is partly due to the near\u2011doubling of the token price.\"\n    },\n    {\n      \"id\": \"C5\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"fees.fees_usd_365d\", \"fees.issuance_usd_365d\"],\n      \"caveat\": \"Issuance figures assume current price and may change if the token price moves sharply.\"\n    },\n    {\n      \"id\": \"C6\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"fees.mcap_to_fees\"],\n      \"caveat\": \"Market\u2011cap can be influenced by speculative factors unrelated to fee revenue.\"\n    },\n    {\n      \"id\": \"C7\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"lead.corr_active_change_vs_next_3m_price\", \"level_corr.corr_active_vs_price_monthly\"],\n      \"caveat\": \"Correlation does not prove causation and may shift in different market regimes.\"\n    },\n    {\n      \"id\": \"C8\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"supply.growth_pct\"],\n      \"caveat\": \"Even modest supply growth can be dilutive if demand does not keep pace.\"\n    },\n    {\n      \"id\": \"C9\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"vol_near.yoy_pct\"],\n      \"caveat\": \"Higher token\u2011denominated volume could be a price effect rather than genuine usage growth.\"\n    },\n    {\n      \"id\": \"C10\",\n      \"verdict\": \"MIXED\",\n      \"evidence\": [\"intents.swaps_change_pct\", \"intents.usd_change_pct\"],\n      \"caveat\": \"Swap count rose but USD volume fell, so the claim is only partially true.\"\n    }\n  ],\n  \"thesis\": \"The evidence points to a severe contraction in active accounts and transaction counts on NEAR, while fee revenue per user and transfer volume per active have modestly improved; however, the market cap is many times annual fees, indicating that price is outpacing on\u2011chain economic activity and raising concerns about long\u2011term sustainability.\",\n  \"would_change_my_mind\": \"If annual fee revenue grew to exceed 10% of market cap (fees.mcap_to_fees dropping below 10), indicating that usage is now funding security at a level comparable to valuation.\"\n}",
-  "DeepSeek-V4-Flash (DeepSeek)": "{\"claims\":[{\"id\":\"C1\",\"verdict\":\"SUPPORTED\",\"evidence\":[\"active.yoy_pct\",\"txns.yoy_pct\",\"w90.active.yoy_pct\",\"w90.txns.yoy_pct\"],\"caveat\":\"The drop could partly reflect removal of bot or incentive-driven activity rather than loss of genuine users.\"},{\"id\":\"C2\",\"verdict\":\"SUPPORTED\",\"evidence\":[\"fee_per_active.now\",\"fee_per_active.year_ago\",\"vol_usd.yoy_pct\",\"active.yoy_pct\"],\"caveat\":\"Higher fees and transfer value per active account could be driven by a few large transactions or price effects rather than broad economic activity.\"},{\"id\":\"C3\",\"verdict\":\"SUPPORTED\",\"evidence\":[\"new_acc.yoy_pct\",\"active_contracts.yoy_pct\",\"active_peak.current_vs_peak_pct\"],\"caveat\":\"The decline could also reflect organic user loss or changes in how contracts are counted.\"},{\"id\":\"C4\",\"verdict\":\"SUPPORTED\",\"evidence\":[\"vol_usd.yoy_pct\",\"w90.vol_usd.yoy_pct\"],\"caveat\":\"USD transfer volume can be inflated by token price appreciation, so it may overstate real activity growth.\"},{\"id\":\"C5\",\"verdict\":\"SUPPORTED\",\"evidence\":[\"fees.fees_usd_365d\",\"fees.issuance_usd_365d\"],\"caveat\":\"Issued tokens may not all be sold, and fee revenue may undercount other protocol revenue streams.\"},{\"id\":\"C6\",\"verdict\":\"SUPPORTED\",\"evidence\":[\"fees.mcap_to_fees\",\"fees.mcap_now\",\"fees.fees_usd_365d\"],\"caveat\":\"Market cap reflects future expectations, and current fees may not capture all value accrual.\"},{\"id\":\"C7\",\"verdict\":\"SUPPORTED\",\"evidence\":[\"lead.corr_active_change_vs_next_3m_price\",\"lead.n_months\"],\"caveat\":\"The relationship could be nonlinear or operate over different horizons than the 3-month lead tested.\"},{\"id\":\"C8\",\"verdict\":\"SUPPORTED\",\"evidence\":[\"supply.growth_pct\",\"supply.total_now\",\"supply.total_year_ago\"],\"caveat\":\"Even modest supply growth can be large relative to fee revenue, as seen in the fee versus issuance comparison.\"},{\"id\":\"C9\",\"verdict\":\"SUPPORTED\",\"evidence\":[\"vol_near.yoy_pct\",\"vol_near.avg_30d\",\"vol_near.avg_30d_year_ago\"],\"caveat\":\"NEAR-denominated volume can still be affected by token price volatility and may not reflect stable economic value.\"},{\"id\":\"C10\",\"verdict\":\"MIXED\",\"evidence\":[\"intents.swaps_change_pct\",\"intents.usd_change_pct\",\"intents.swaps_first4\",\"intents.swaps_last4\",\"intents.usd_first4\",\"intents.usd_last4\",\"active.yoy_pct\"],\"caveat\":\"The first and last four sampled Sundays may be noisy, and USD volume changes are sensitive to token price.\"}],\"thesis\":\"The evidence best supports a bearish long-term case: user activity, new accounts, and active contracts have collapsed, fee revenue is negligible relative to token issuance and market cap, and the remaining usage does not justify the valuation. Transfer volume growth and modest supply inflation are positive, but they appear disconnected from sustainable on-chain participation and fee generation.\",\"would_change_my_mind\":\"A sustained reversal in active accounts and new account creation, with active.yoy_pct and new_acc.yoy_pct turning positive, combined with annual fees growing to a meaningful share of issuance, would change my mind.\"}",
-  "GLM-5.2 (Zhipu)": "```json\n{\n  \"claims\": [\n    {\n      \"id\": \"C1\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"active.yoy_pct\", \"txns.yoy_pct\", \"w90.active.yoy_pct\", \"w90.txns.yoy_pct\", \"active_peak.current_vs_peak_pct\"],\n      \"caveat\": \"The 30-day window ending 2026-10 shows a modest uptick in active accounts versus the prior month (monthly.2026-09.active to monthly.2026-10.active), so the collapse may be decelerating rather than still accelerating.\"\n    },\n    {\n      \"id\": \"C2\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"fee_per_active.now\", \"fee_per_active.year_ago\", \"fee_usd.yoy_pct\", \"active.yoy_pct\", \"vol_usd.yoy_pct\"],\n      \"caveat\": \"Fee per active is a ratio that can rise simply because the denominator collapsed; the 90-day fee figure tells a weaker story (w90.fee_usd.yoy_pct is -55.977) suggesting the 30-day window may capture a transient fee spike.\"\n    },\n    {\n      \"id\": \"C3\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"new_acc.yoy_pct\", \"active_contracts.yoy_pct\", \"monthly.2024-12.new_acc\", \"monthly.2026-10.new_acc\"],\n      \"caveat\": \"The data shows the magnitude of the drop but does not directly identify whether the lost activity was automated, incentive-driven, or organic; the causal claim is inferred from the scale of decline, not proven.\"\n    },\n    {\n      \"id\": \"C4\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"vol_usd.yoy_pct\", \"w90.vol_usd.yoy_pct\"],\n      \"caveat\": \"USD transfer volume can be inflated by a small number of very large transfers; without distribution data, a few whales could account for most of the increase.\"\n    },\n    {\n      \"id\": \"C5\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"fees.fees_usd_365d\", \"fees.issuance_usd_365d\"],\n      \"caveat\": \"Issuance value is computed at current price; if price falls, the real dilution cost to holders shrinks, narrowing the gap between fees and issuance.\"\n    },\n    {\n      \"id\": \"C6\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"fees.mcap_to_fees\", \"fees.mcap_now\", \"fees.fees_usd_365d\"],\n      \"caveat\": \"Market-cap-to-fees is a point-in-time ratio at a price that has risen sharply (price.yoy_pct is positive); if price reverts, the ratio compresses without any improvement in the fee base.\"\n    },\n    {\n      \"id\": \"C7\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"lead.corr_active_change_vs_next_3m_price\", \"level_corr.corr_active_vs_price_monthly\"],\n      \"caveat\": \"A Pearson correlation of 0.17 over 54 months has a wide confidence interval; the relationship could be nonlinear or conditional on regime, which a single linear correlation would miss.\"\n    },\n    {\n      \"id\": \"C8\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"supply.growth_pct\"],\n      \"caveat\": \"Supply growth of 2.48% is modest in percentage terms, but the dollar value of that issuance (fees.issuance_usd_365d) is over 100x annual fee revenue, so the absolute dilution is still large relative to the chain's own revenue.\"\n    },\n    {\n      \"id\": \"C9\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"vol_near.yoy_pct\"],\n      \"caveat\": \"NEAR-denominated volume rising while USD-denominated volume also rose (vol_usd.yoy_pct) is consistent, but if transfer volume is concentrated in a few large transactions, the growth may not reflect broad-based economic activity.\"\n    },\n    {\n      \"id\": \"C10\",\n      \"verdict\": \"MIXED\",\n      \"evidence\": [\"intents.swaps_change_pct\", \"intents.usd_change_pct\", \"active.yoy_pct\"],\n      \"caveat\": \"The claim asserts USD volume is higher, but intents.usd_change_pct is negative (-10.5519); swap count rose while USD value per swap fell (intents.usd_per_swap_last4 is lower than the first-4 average), so the volume growth is in low-value swaps.\"\n    }\n  ],\n  \"thesis\": \"The evidence supports a bearish long-term case: NEAR's on-chain usage has collapsed across every activity metric (active accounts -73.5%, transactions -84.2%, new accounts -96.2%, active contracts -97.8%) while its price nearly doubled, and annual fee revenue ($1.2M) is negligible against both its $5.6B market cap (4659x) and $135.8M annual issuance, meaning holders are diluted far more than fees return. Although transfer volume and fee-per-active have risen, suggesting the remaining usage is higher-value, the near-zero correlation between activity changes and subsequent price (lead.corr_active_change_vs_next_3m_price = 0.17) indicates the token's appreciation is disconnected from on-chain adoption, making the valuation fragile.\",\n  \"would_change_my_mind\": \"A sustained recovery in monthly active accounts above 150,000 for at least three consecutive months alongside rising monthly fee revenue, demonstrating that organic, fee-generating adoption is resuming rather than merely larger transfers among a shrinking user base.\"\n}\n```",
-  "Qwen3-235B (Alibaba)": "{\n  \"claims\": [\n    {\n      \"id\": \"C1\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\n        \"active.yoy_pct\",\n        \"txns.yoy_pct\",\n        \"w90.active.yoy_pct\",\n        \"w90.txns.yoy_pct\"\n      ],\n      \"caveat\": \"A temporary drop in activity may not reflect long-term decline if usage recovers or shifts off-chain.\"\n    },\n    {\n      \"id\": \"C2\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\n        \"fee_per_active.now\",\n        \"fee_per_active.year_ago\",\n        \"vol_usd.avg_30d\",\n        \"vol_usd.avg_30d_year_ago\"\n      ],\n      \"caveat\": \"Higher value per user may not compensate for massive user loss if network effects depend on scale.\"\n    },\n    {\n      \"id\": \"C3\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\n        \"new_acc.yoy_pct\",\n        \"active_contracts.yoy_pct\",\n        \"active_peak.current_vs_peak_pct\"\n      ],\n      \"caveat\": \"Past high account and contract activity could have been organic but unsustainable, not necessarily inflated.\"\n    },\n    {\n      \"id\": \"C4\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\n        \"vol_usd.avg_30d\",\n        \"vol_usd.avg_30d_year_ago\",\n        \"vol_usd.yoy_pct\"\n      ],\n      \"caveat\": \"Increased USD volume could be driven by price volatility rather than sustained economic utility.\"\n    },\n    {\n      \"id\": \"C5\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\n        \"fees.fees_usd_365d\",\n        \"fees.issuance_usd_365d\"\n      ],\n      \"caveat\": \"Security may be subsidized by other mechanisms not captured in on-chain fees.\"\n    },\n    {\n      \"id\": \"C6\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\n        \"fees.mcap_to_fees\"\n      ],\n      \"caveat\": \"High valuation relative to fees may be justified if future growth is expected and realized.\"\n    },\n    {\n      \"id\": \"C7\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\n        \"lead.corr_active_change_vs_next_3m_price\"\n      ],\n      \"caveat\": \"A weak correlation does not rule out non-linear or delayed predictive relationships.\"\n    },\n    {\n      \"id\": \"C8\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\n        \"supply.growth_pct\"\n      ],\n      \"caveat\": \"Modest supply growth could still be dilutive if not matched by demand growth.\"\n    },\n    {\n      \"id\": \"C9\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\n        \"vol_near.avg_30d\",\n        \"vol_near.avg_30d_year_ago\",\n        \"vol_near.yoy_pct\"\n      ],\n      \"caveat\": \"Increased NEAR-denominated volume may reflect speculation rather than real usage growth.\"\n    },\n    {\n      \"id\": \"C10\",\n      \"verdict\": \"MIXED\",\n      \"evidence\": [\n        \"intents.swaps_change_pct\",\n        \"intents.usd_change_pct\",\n        \"intents.usd_per_swap_last4\"\n      ],\n      \"caveat\": \"Swap count rose but USD volume fell, suggesting more small or low-value swaps, not necessarily stronger real usage.\"\n    }\n  ],\n  \"thesis\": \"The evidence supports a bearish long-term case: NEAR's core usage metrics have collapsed year-over-year, with active accounts, transactions, and new accounts down over 70%, suggesting a loss of organic network activity. While USD transfer volume and value per user have increased, these gains are overshadowed by the scale of user attrition and a valuation that is extremely high relative to fee revenue.\",\n  \"would_change_my_mind\": \"Sustained growth in active accounts and transaction volume over the next 6 months, with fee revenue growing faster than issuance, would indicate a recovery in organic demand and economic sustainability.\"\n}"
+  "gpt-oss-120b (OpenAI, open-weight)": "{\n  \"claims\": [\n    {\n      \"id\": \"C1\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"active.yoy_pct\", \"txns.yoy_pct\"],\n      \"caveat\": \"Averages may mask short\u2011term spikes or off\u2011chain activity.\"\n    },\n    {\n      \"id\": \"C2\",\n      \"verdict\": \"MIXED\",\n      \"evidence\": [\"fee_per_active.now\", \"fee_per_active.year_ago\", \"vol_usd.yoy_pct\", \"active.yoy_pct\"],\n      \"caveat\": \"Per\u2011active metrics are derived indirectly; total economic activity could still be lower.\"\n    },\n    {\n      \"id\": \"C3\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"new_acc.yoy_pct\", \"active_contracts.yoy_pct\", \"active_peak.current_vs_peak_pct\"],\n      \"caveat\": \"Decline could reflect a market cycle rather than prior incentive\u2011driven inflation.\"\n    },\n    {\n      \"id\": \"C4\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"vol_usd.yoy_pct\"],\n      \"caveat\": \"Volume increase is partly driven by price appreciation.\"\n    },\n    {\n      \"id\": \"C5\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"fees.fees_usd_365d\", \"fees.issuance_usd_365d\"],\n      \"caveat\": \"Issuance includes supply growth, not all of which is inflationary.\"\n    },\n    {\n      \"id\": \"C6\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"valuation.mcap_to_fees\"],\n      \"caveat\": \"Market cap reflects future expectations, not just current security costs.\"\n    },\n    {\n      \"id\": \"C7\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"lead.corr_active_change_vs_next_3m_price\"],\n      \"caveat\": \"Correlation measured over a limited period; other lag structures may exist.\"\n    },\n    {\n      \"id\": \"C8\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"supply.growth_pct\"],\n      \"caveat\": \"Even modest inflation can erode value if demand doesn\u2019t keep pace.\"\n    },\n    {\n      \"id\": \"C9\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"paradox.share_of_usd_growth_from_price\", \"vol_near.yoy_pct\"],\n      \"caveat\": \"Share calculations are based on means and may not capture all dynamics.\"\n    },\n    {\n      \"id\": \"C10\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"intents_daily.fees_yoy_pct\", \"intents_daily.revenue_yoy_pct\", \"active.yoy_pct\"],\n      \"caveat\": \"Intents represent only one type of activity; overall usage may still be declining.\"\n    },\n    {\n      \"id\": \"C11\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"apps.x_gas_fees\", \"apps.fees_yoy_pct\"],\n      \"caveat\": \"App fees include many services; a high ratio doesn\u2019t imply security is cheap.\"\n    },\n    {\n      \"id\": \"C12\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"intents_daily.revenue_yoy_pct\", \"holders.annualised\"],\n      \"caveat\": \"Revenue may not be fully used for buybacks or may not translate to price support.\"\n    },\n    {\n      \"id\": \"C13\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"apps.intents_share_30d\", \"apps.protocols_over_100_usd_a_day\"],\n      \"caveat\": \"A small number of other apps could grow rapidly in the future.\"\n    },\n    {\n      \"id\": \"C14\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"holders.cover_of_issuance_pct\", \"valuation.mcap_to_intents_revenue_annualised\"],\n      \"caveat\": \"Future revenue growth could improve coverage and lower valuation multiples.\"\n    },\n    {\n      \"id\": \"C15\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"crosscheck.gas_fees_diff_pct\"],\n      \"caveat\": \"Only gas\u2011fee data were cross\u2011checked; other metrics may still differ between providers.\"\n    },\n    {\n      \"id\": \"C16\",\n      \"verdict\": \"CONTRADICTED\",\n      \"evidence\": [\"holders.cover_of_issuance_pct\", \"fees.fees_usd_365d\", \"fees.issuance_usd_365d\"],\n      \"caveat\": \"Burned fees are not quantified; they could offset issuance but are not shown here.\"\n    },\n    {\n      \"id\": \"C17\",\n      \"verdict\": \"MIXED\",\n      \"evidence\": [\"fees.fees_usd_365d\", \"apps.x_gas_fees\"],\n      \"caveat\": \"While on\u2011chain gas fees are low, app fees indicate users do pay for services.\"\n    },\n    {\n      \"id\": \"C18\",\n      \"verdict\": \"CONTRADICTED\",\n      \"evidence\": [\"stables.yoy_pct\"],\n      \"caveat\": \"Stablecoin metrics may lag or be measured differently across sources.\"\n    },\n    {\n      \"id\": \"C19\",\n      \"verdict\": \"CONTRADICTED\",\n      \"evidence\": [\"tvl.yoy_pct\", \"dex.yoy_pct\"],\n      \"caveat\": \"TVL and DEX volume are increasing, though other DeFi metrics could be declining.\"\n    },\n    {\n      \"id\": \"C20\",\n      \"verdict\": \"CONTRADICTED\",\n      \"evidence\": [\"txns.yoy_pct\"],\n      \"caveat\": \"Daily transaction counts are averaged; occasional peaks may exist but are not reflected in the mean.\"\n    }\n  ],\n  \"thesis\": \"The data show a stark collapse in active accounts and transaction volume on NEAR, while the modest supply growth and high market\u2011cap multiples indicate that valuation is far outpacing genuine on\u2011chain usage; the ecosystem is heavily reliant on a single product (Intents) and app fees dwarf gas fees, suggesting limited sustainable demand.\",\n  \"would_change_my_mind\": \"If 30\u2011day average daily active accounts and transaction counts both rose by more than 50% year\u2011over\u2011year while gas\u2011fee revenue and app\u2011fee revenue remained low, indicating a genuine resurgence of core usage.\"\n}",
+  "DeepSeek-V4.1-Flash (DeepSeek)": "{\"claims\":[{\"id\":\"C1\",\"verdict\":\"SUPPORTED\",\"evidence\":[\"active.yoy_pct\",\"txns.yoy_pct\",\"w90.active.yoy_pct\",\"w90.txns.yoy_pct\"],\"caveat\":\"Averages can be distorted by measurement changes or one-off activity, but both the 30-day and 90-day comparisons point the same way.\"},{\"id\":\"C2\",\"verdict\":\"SUPPORTED\",\"evidence\":[\"fee_per_active.now\",\"fee_per_active.year_ago\",\"vol_usd.yoy_pct\",\"active.yoy_pct\",\"apps.fees_yoy_pct\"],\"caveat\":\"Per-account averages can rise because low-value or automated accounts left, and total gas fees still fell.\"},{\"id\":\"C3\",\"verdict\":\"MIXED\",\"evidence\":[\"new_acc.yoy_pct\",\"active_contracts.yoy_pct\",\"active_peak.current_vs_peak_pct\",\"monthly.2024-12.new_acc\",\"monthly.2026-10.new_acc\"],\"caveat\":\"The data show the decline but cannot prove it was automated or incentive-driven rather than genuine user attrition.\"},{\"id\":\"C4\",\"verdict\":\"SUPPORTED\",\"evidence\":[\"vol_usd.yoy_pct\",\"w90.vol_usd.yoy_pct\",\"vol_usd.avg_30d\",\"vol_usd.avg_30d_year_ago\"],\"caveat\":\"USD volume can be inflated by price appreciation and large transfers, so it is not a clean measure of organic activity.\"},{\"id\":\"C5\",\"verdict\":\"SUPPORTED\",\"evidence\":[\"fees.fees_usd_365d\",\"fees.issuance_usd_365d\",\"holders.gas_cover_of_issuance_pct\"],\"caveat\":\"The comparison values issuance at current price and does not measure actual security spend.\"},{\"id\":\"C6\",\"verdict\":\"SUPPORTED\",\"evidence\":[\"fees.mcap_to_fees\",\"valuation.mcap_to_gas_fees\",\"fees.fees_usd_365d\",\"fees.mcap_now\"],\"caveat\":\"Gas fees exclude app and Intents revenue, so the ratio may overstate overvaluation if value accrues elsewhere.\"},{\"id\":\"C7\",\"verdict\":\"SUPPORTED\",\"evidence\":[\"lead.corr_active_change_vs_next_3m_price\",\"lead.n_months\",\"level_corr.corr_active_vs_price_monthly\"],\"caveat\":\"A weak historical correlation does not rule out predictive power at other horizons or in nonlinear relationships.\"},{\"id\":\"C8\",\"verdict\":\"SUPPORTED\",\"evidence\":[\"supply.growth_pct\",\"supply.total_now\",\"supply.total_year_ago\"],\"caveat\":\"Supply growth can change and does not account for buybacks or burns outside the total supply series.\"},{\"id\":\"C9\",\"verdict\":\"SUPPORTED\",\"evidence\":[\"vol_usd.yoy_pct\",\"price.yoy_pct\",\"vol_near.yoy_pct\",\"paradox.share_of_usd_growth_from_price\",\"paradox.near_volume_x\"],\"caveat\":\"The decomposition uses 30-day means and may be sensitive to outliers or price measurement.\"},{\"id\":\"C10\",\"verdict\":\"SUPPORTED\",\"evidence\":[\"intents_daily.fees_yoy_pct\",\"intents_daily.revenue_yoy_pct\",\"active.yoy_pct\",\"apps.intents_share_30d\"],\"caveat\":\"Intents fee growth may reflect fee mix or pricing, and sampled swap USD volume actually fell.\"},{\"id\":\"C11\",\"verdict\":\"SUPPORTED\",\"evidence\":[\"apps.x_gas_fees\",\"apps.fees_usd_365d\",\"fees.fees_usd_365d\",\"apps.fees_yoy_pct\"],\"caveat\":\"App fees are concentrated in Intents and may not accrue to NEAR holders.\"},{\"id\":\"C12\",\"verdict\":\"SUPPORTED\",\"evidence\":[\"intents_daily.revenue_yoy_pct\",\"intents_daily.revenue_avg_30d\",\"intents_daily.revenue_avg_30d_year_ago\",\"holders.annualised\",\"holders.usd_since_first_day\"],\"caveat\":\"The buyback program is recent and small relative to market cap and issuance, so 'get paid' may overstate holder cash flow.\"},{\"id\":\"C13\",\"verdict\":\"SUPPORTED\",\"evidence\":[\"apps.intents_share_30d\",\"apps.protocols_over_100_usd_a_day\",\"apps.fees_avg_30d\",\"intents_daily.fees_avg_30d\"],\"caveat\":\"Fee share does not capture non-fee economic activity or apps with revenue outside fees.\"},{\"id\":\"C14\",\"verdict\":\"SUPPORTED\",\"evidence\":[\"holders.cover_of_issuance_pct\",\"valuation.mcap_to_intents_revenue_annualised\",\"holders.mcap_to_annualised\",\"fees.issuance_usd_365d\",\"holders.annualised\"],\"caveat\":\"Buyback coverage uses annualised recent revenue and issuance value at current price, both of which can change.\"},{\"id\":\"C15\",\"verdict\":\"SUPPORTED\",\"evidence\":[\"crosscheck.gas_fees_diff_pct\",\"crosscheck.gas_fee_days_compared\",\"crosscheck.price_diff_pct\"],\"caveat\":\"Agreement on gas fees and price does not validate all other metrics or their methodology.\"},{\"id\":\"C16\",\"verdict\":\"CONTRADICTED\",\"evidence\":[\"supply.growth_pct\",\"supply.total_now\",\"supply.total_year_ago\",\"holders.cover_of_issuance_pct\",\"fees.issuance_usd_365d\"],\"caveat\":\"Total supply may already net some burns, but the provided series shows growth rather than deflation.\"},{\"id\":\"C17\",\"verdict\":\"CONTRADICTED\",\"evidence\":[\"active.avg_30d\",\"txns.avg_30d\",\"apps.fees_avg_30d\",\"intents_daily.fees_avg_30d\"],\"caveat\":\"Activity is far below peak and concentrated in Intents, so 'ghost chain' may be rhetorical rather than literal.\"},{\"id\":\"C18\",\"verdict\":\"CONTRADICTED\",\"evidence\":[\"stables.yoy_pct\",\"stables.avg_30d\",\"stables.avg_30d_year_ago\",\"intents_daily.fees_yoy_pct\"],\"caveat\":\"Stablecoin averages can be affected by a few large holders or migrations, but the provided trend is negative.\"},{\"id\":\"C19\",\"verdict\":\"CONTRADICTED\",\"evidence\":[\"tvl.yoy_pct\",\"dex.yoy_pct\",\"tvl.avg_30d\",\"dex.avg_30d\"],\"caveat\":\"TVL and DEX volume can be price-inflated, and stablecoin liquidity is down.\"},{\"id\":\"C20\",\"verdict\":\"CONTRADICTED\",\"evidence\":[\"txns.yoy_pct\",\"w90.txns.yoy_pct\",\"txns.avg_30d\",\"txns.avg_30d_year_ago\"],\"caveat\":\"Transaction counts can be affected by batching or spam changes, but the measured trend is lower.\"}],\"thesis\":\"The evidence supports a bearish long-term case for NEAR as a general-purpose chain: core active accounts, transactions, new accounts, and active contracts have collapsed, gas fees are tiny versus issuance, and market cap is extremely high relative to gas fees. The main offset is NEAR Intents, where app fees and retained revenue are growing and buybacks have started, but that activity is concentrated, stablecoin liquidity is shrinking, and buybacks cover only a minority of issuance.\",\"would_change_my_mind\":\"A sustained multi-month increase in active accounts and transactions alongside broadening app-fee growth beyond NEAR Intents and stablecoin liquidity growth.\"}",
+  "GLM-5.2 (Zhipu)": "```json\n{\n  \"claims\": [\n    {\n      \"id\": \"C1\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"active.yoy_pct\", \"txns.yoy_pct\"],\n      \"caveat\": \"A 30-day mean could be distorted by a single anomalous week, though the 90-day window (w90.active.yoy_pct, w90.txns.yoy_pct) confirms the same trend.\"\n    },\n    {\n      \"id\": \"C2\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"fee_per_active.now\", \"fee_per_active.year_ago\", \"paradox.near_per_txn_x\", \"paradox.near_per_txn_now\", \"paradox.near_per_txn_year_ago\"],\n      \"caveat\": \"Higher per-account value could reflect a few large Intents users rather than broad-based economic intensity among remaining accounts.\"\n    },\n    {\n      \"id\": \"C3\",\n      \"verdict\": \"MIXED\",\n      \"evidence\": [\"new_acc.yoy_pct\", \"active_contracts.yoy_pct\", \"active_peak.current_vs_peak_pct\", \"txn_step.change_pct\", \"txn_step.share_of_12m_txn_fall\"],\n      \"caveat\": \"The dramatic drops in new accounts and active contracts are real, but the data cannot directly distinguish automated or incentive-driven activity from genuine organic churn.\"\n    },\n    {\n      \"id\": \"C4\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"vol_usd.yoy_pct\", \"w90.vol_usd.yoy_pct\"],\n      \"caveat\": \"USD volume is a function of both token quantity and price; if price falls, this growth reverses without any change in real transfer activity.\"\n    },\n    {\n      \"id\": \"C5\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"fees.fees_usd_365d\", \"fees.issuance_usd_365d\", \"holders.gas_cover_of_issuance_pct\"],\n      \"caveat\": \"Gas fees are not the only mechanism that could fund security; app-level revenue or buybacks could in principle be redirected, though the data shows they currently are not.\"\n    },\n    {\n      \"id\": \"C6\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"fees.mcap_to_fees\", \"valuation.mcap_to_gas_fees\"],\n      \"caveat\": \"If app fees rather than gas fees are the correct denominator, the ratio drops to under 80x (valuation.mcap_to_app_fees), which is far less extreme.\"\n    },\n    {\n      \"id\": \"C7\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"lead.corr_active_change_vs_next_3m_price\", \"level_corr.corr_active_vs_price_monthly\"],\n      \"caveat\": \"Low correlation does not rule out a non-linear or lagged relationship that this specific Pearson test over a 3-month horizon would miss.\"\n    },\n    {\n      \"id\": \"C8\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"supply.growth_pct\"],\n      \"caveat\": \"A low percentage growth rate on a large supply base still produces over $100M in new token value (fees.issuance_usd_365d), which matters for dilution.\"\n    },\n    {\n      \"id\": \"C9\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"vol_near.yoy_pct\", \"vol_usd.yoy_pct\", \"paradox.share_of_usd_growth_from_price\", \"paradox.share_of_usd_growth_from_near_moved\"],\n      \"caveat\": \"The decomposition uses log-shares that do not sum to exactly one, so the attribution is approximate rather than exact.\"\n    },\n    {\n      \"id\": \"C10\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"intents_daily.fees_yoy_pct\", \"active.yoy_pct\", \"intents.swaps_change_pct\"],\n      \"caveat\": \"Intents fee growth could be driven by a temporary surge in cross-chain arbitrage rather than durable user adoption.\"\n    },\n    {\n      \"id\": \"C11\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"apps.x_gas_fees\", \"apps.fees_yoy_pct\", \"apps.fees_avg_30d\", \"fees.fees_usd_365d\"],\n      \"caveat\": \"App fees are gross user charges, not all of which accrue to NEAR token holders; only the kept share (intents_daily.kept_share_30d) flows back.\"\n    },\n    {\n      \"id\": \"C12\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"intents_daily.revenue_yoy_pct\", \"intents_daily.revenue_avg_30d\", \"intents_daily.revenue_avg_30d_year_ago\", \"holders.avg_30d\", \"holders.usd_since_first_day\"],\n      \"caveat\": \"The buyback program only started in February 2026 (holders.days = 260), so the year-ago comparison for revenue reflects a period before buybacks existed, making the growth partly mechanical.\"\n    },\n    {\n      \"id\": \"C13\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"apps.intents_share_30d\", \"apps.protocols_over_100_usd_a_day\", \"intents_daily.fees_avg_30d\", \"apps.fees_avg_30d\"],\n      \"caveat\": \"Four protocols over $100/day is a snapshot; new apps could be emerging that have not yet crossed that threshold but may diversify the ecosystem soon.\"\n    },\n    {\n      \"id\": \"C14\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"holders.cover_of_issuance_pct\", \"valuation.mcap_to_intents_revenue_annualised\", \"fees.issuance_usd_365d\", \"holders.annualised\"],\n      \"caveat\": \"If Intents revenue continues its 334% YoY growth trajectory, coverage of issuance could rise rapidly and the valuation multiple could compress quickly.\"\n    },\n    {\n      \"id\": \"C15\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\"crosscheck.gas_fees_diff_pct\", \"crosscheck.gas_fee_days_compared\", \"crosscheck.price_diff_pct\", \"crosscheck.price_days_compared\"],\n      \"caveat\": \"Agreement on gas fees and price does not guarantee agreement on active-account or transaction counts, which come from only one provider.\"\n    },\n    {\n      \"id\": \"C16\",\n      \"verdict\": \"CONTRADICTED\",\n      \"evidence\": [\"holders.cover_of_issuance_pct\", \"holders.gas_cover_of_issuance_pct\", \"fees.issuance_usd_365d\", \"holders.annualised\", \"fees.fees_usd_365d\"],\n      \"caveat\": \"If burned fees or other mechanisms not captured in these metrics exist, the net inflation picture could differ, but no such data is provided here.\"\n    },\n    {\n      \"id\": \"C17\",\n      \"verdict\": \"CONTRADICTED\",\n      \"evidence\": [\"apps.fees_avg_30d\", \"intents_daily.fees_avg_30d\", \"active.avg_30d\", \"intents.swaps_last4\"],\n      \"caveat\": \"While fees are meaningful in aggregate, they are concentrated in a single product and a small user base, so 'ghost chain' is wrong on revenue but partially right on breadth.\"\n    },\n    {\n      \"id\": \"C18\",\n      \"verdict\": \"CONTRADICTED\",\n      \"evidence\": [\"stables.yoy_pct\", \"stables.avg_30d\", \"stables.avg_30d_year_ago\"],\n      \"caveat\": \"Stablecoin supply could lag Intents growth if users route through cross-chain swaps without parking stablecoins on NEAR, so the contradiction may narrow in coming months.\"\n    },\n    {\n      \"id\": \"C19\",\n      \"verdict\": \"CONTRADICTED\",\n      \"evidence\": [\"tvl.yoy_pct\", \"dex.yoy_pct\", \"stables.yoy_pct\"],\n      \"caveat\": \"TVL and DEX volume grew, but stablecoin liquidity shrank (stables.yoy_pct), so the DeFi ecosystem is shifting in composition even if it is not uniformly shrinking.\"\n    },\n    {\n      \"id\": \"C20\",\n      \"verdict\": \"CONTRADICTED\",\n      \"evidence\": [\"txns.yoy_pct\", \"txns.avg_30d\", \"txns.avg_30d_year_ago\"],\n      \"caveat\": \"This is a control claim and is clearly false; the only way it could be true is if a different transaction definition were used, but the provided data is unambiguous.\"\n    }\n  ],\n  \"thesis\": \"NEAR's core on-chain usage has collapsed\u2014active accounts and transactions are down 78\u201385% year-over-year and 97% from peak\u2014yet the surviving activity is far more economically valuable per account, driven almost entirely by NEAR Intents, which generates growing fees (up 51% YoY), revenue (up 334% YoY), and token buybacks. The bull case rests on Intents becoming a durable cross-chain revenue engine, but the chain is a one-product economy (87% of app fees from Intents, only four protocols over $100/day), buybacks cover only a fifth of new issuance, and the market cap is hundreds of times annualized Intents revenue, making the setup fragile and richly valued.\",\n  \"would_change_my_mind\": \"A sustained six-month recovery in monthly active accounts back above 200,000 (monthly.2025-11.active level) combined with apps.intents_share_30d falling below 0.50, indicating diversified organic adoption rather than single-product dependence.\"\n}\n```",
+  "Qwen3-30B (Alibaba)": "{\n  \"claims\": [\n    {\n      \"id\": \"C1\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\n        \"active.yoy_pct\",\n        \"txns.yoy_pct\",\n        \"new_acc.yoy_pct\",\n        \"active_contracts.yoy_pct\",\n        \"monthly.2025-11.active\",\n        \"monthly.2026-11.active\"\n      ],\n      \"caveat\": \"The decline may reflect a shift to less frequent but higher-value usage, not necessarily a collapse in real activity.\"\n    },\n    {\n      \"id\": \"C2\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\n        \"fee_per_active.now\",\n        \"fee_per_active.year_ago\",\n        \"vol_near.yoy_pct\",\n        \"vol_usd.yoy_pct\"\n      ],\n      \"caveat\": \"Higher fees per user could be due to price inflation rather than increased economic value per transaction.\"\n    },\n    {\n      \"id\": \"C3\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\n        \"new_acc.yoy_pct\",\n        \"active_contracts.yoy_pct\",\n        \"active_peak.current_vs_peak_pct\"\n      ],\n      \"caveat\": \"The drop in new accounts and contracts may reflect a maturation of the ecosystem rather than exit of incentive-driven actors.\"\n    },\n    {\n      \"id\": \"C4\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\n        \"vol_usd.yoy_pct\",\n        \"w90.vol_usd.yoy_pct\",\n        \"monthly.2025-11.vol_usd\",\n        \"monthly.2026-11.vol_usd\"\n      ],\n      \"caveat\": \"The rise in USD volume may be driven by price appreciation rather than increased real economic activity.\"\n    },\n    {\n      \"id\": \"C5\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\n        \"fees.issuance_usd_365d\",\n        \"fees.fees_usd_365d\",\n        \"supply.growth_pct\"\n      ],\n      \"caveat\": \"The chain may still be secure if issuance is used for long-term incentives or network growth, not just inflation.\"\n    },\n    {\n      \"id\": \"C6\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\n        \"valuation.mcap_to_gas_fees\",\n        \"fees.mcap_now\",\n        \"fees.fees_usd_365d\"\n      ],\n      \"caveat\": \"Market cap could be justified if future growth in app fees or Intents revenue is expected.\"\n    },\n    {\n      \"id\": \"C7\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\n        \"lead.corr_active_change_vs_next_3m_price\",\n        \"level_corr.corr_active_vs_price_monthly\"\n      ],\n      \"caveat\": \"Low correlation may reflect noise or structural changes in how price is driven, not a lack of predictive power.\"\n    },\n    {\n      \"id\": \"C8\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\n        \"supply.growth_pct\"\n      ],\n      \"caveat\": \"Modest supply growth may not be sustainable if future issuance increases or demand remains weak.\"\n    },\n    {\n      \"id\": \"C9\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\n        \"paradox.share_of_usd_growth_from_price\",\n        \"vol_near.yoy_pct\",\n        \"vol_usd.yoy_pct\"\n      ],\n      \"caveat\": \"The share of growth from price may be misleading if NEAR's utility is increasing despite low volume in NEAR terms.\"\n    },\n    {\n      \"id\": \"C10\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\n        \"intents_daily.fees_yoy_pct\",\n        \"intents_daily.revenue_yoy_pct\",\n        \"intents.swaps_change_pct\",\n        \"intents.usd_change_pct\"\n      ],\n      \"caveat\": \"Growth in Intents fees may be temporary or driven by a single protocol, not broad ecosystem adoption.\"\n    },\n    {\n      \"id\": \"C11\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\n        \"apps.x_gas_fees\",\n        \"apps.fees_yoy_pct\",\n        \"intents_daily.fees_yoy_pct\"\n      ],\n      \"caveat\": \"The app fee growth may be concentrated in a few protocols, not representative of overall user spending.\"\n    },\n    {\n      \"id\": \"C12\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\n        \"holders.annualised\",\n        \"holders.cover_of_issuance_pct\",\n        \"holders.gas_cover_of_issuance_pct\"\n      ],\n      \"caveat\": \"Buybacks may be unsustainable if revenue growth slows or token price drops.\"\n    },\n    {\n      \"id\": \"C13\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\n        \"apps.protocols_over_100_usd_a_day\",\n        \"apps.intents_share_30d\",\n        \"apps.intents_share_30d_year_ago\"\n      ],\n      \"caveat\": \"The dominance of Intents may be due to a recent launch or marketing push, not long-term ecosystem health.\"\n    },\n    {\n      \"id\": \"C14\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\n        \"holders.cover_of_issuance_pct\",\n        \"valuation.mcap_to_annualised\",\n        \"holders.mcap_to_annualised\"\n      ],\n      \"caveat\": \"Holders may still benefit if buybacks are reinvested or if future revenue grows faster than issuance.\"\n    },\n    {\n      \"id\": \"C15\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\n        \"crosscheck.gas_fees_diff_pct\",\n        \"crosscheck.price_diff_pct\"\n      ],\n      \"caveat\": \"Cross-checks may not catch systematic biases in data collection or reporting delays.\"\n    },\n    {\n      \"id\": \"C16\",\n      \"verdict\": \"NOT_TESTABLE\",\n      \"evidence\": [],\n      \"caveat\": \"Data on burned fees and buybacks is not available to confirm net supply change.\"\n    },\n    {\n      \"id\": \"C17\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\n        \"fee_per_active.now\",\n        \"fee_per_active.year_ago\",\n        \"intents_daily.fees_avg_30d\",\n        \"apps.fees_avg_30d\"\n      ],\n      \"caveat\": \"Low chain fees may reflect high app-level fees, not lack of usage, if users are paying apps instead of gas.\"\n    },\n    {\n      \"id\": \"C18\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\n        \"tvl.yoy_pct\",\n        \"stables.yoy_pct\",\n        \"dex.yoy_pct\"\n      ],\n      \"caveat\": \"Growth in stablecoin volume may be due to speculative activity rather than real DeFi usage.\"\n    },\n    {\n      \"id\": \"C19\",\n      \"verdict\": \"SUPPORTED\",\n      \"evidence\": [\n        \"tvl.yoy_pct\",\n        \"dex.yoy_pct\",\n        \"stables.yoy_pct\"\n      ],\n      \"caveat\": \"Tvl and dex volume may be inflated by synthetic assets or leveraged positions.\"\n    },\n    {\n      \"id\": \"C20\",\n      \"verdict\": \"CONTRADICTED\",\n      \"evidence\": [\n        \"txns.yoy_pct\",\n        \"monthly.2025-11.txns\",\n        \"monthly.2026-11.txns\"\n      ],\n      \"caveat\": \"The claim may be true if it refers to a different metric (e.g. total transactions including non-user activity), but daily user txns are down.\"\n    }\n  ],\n  \"thesis\": \"NEAR's ecosystem is undergoing a structural shift: user activity has declined sharply, but economic value per user has increased, driven by NEAR Intents and app fees. The chain is becoming more efficient and valuable per transaction, with growing app-level revenue and buybacks, though it remains highly dependent on a single product and faces challenges in sustaining growth amid low on-chain usage and modest supply inflation.\",\n  \"would_change_my_mind\": \"If daily active accounts and transaction volume show sustained growth over the next 6 months, while app fees and Intents revenue continue to rise, it would indicate a recovery in organic user adoption.\"\n}"
  }
 }

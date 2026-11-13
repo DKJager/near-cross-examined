@@ -1,0 +1,8 @@
+{
+ "made": "2026-11-11",
+ "forecasts": [
+  {"id": "F1", "side": "bear", "statement": "Revenue returned to holders, annualised, still covers less than half of new issuance.", "path": "holders.cover_of_issuance_pct", "op": "<", "threshold": 50, "due": "2027-02-11"},
+  {"id": "F2", "side": "bear", "statement": "Daily active accounts stay below 150,000 (30-day mean).", "path": "active.avg_30d", "op": "<", "threshold": 150000, "due": "2027-02-11"},
+  {"id": "F3", "side": "bull", "statement": "NEAR's daily NEAR Intents revenue holds at $45,000 or more (30-day mean), about 73% of the $61,269 a day it averaged when this forecast was made.", "path": "intents_daily.revenue_avg_30d", "op": ">=", "threshold": 45000, "due": "2027-02-11"}
+ ]
+}

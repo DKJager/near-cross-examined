@@ -1,141 +1,162 @@
 {
- "as_of": "2026-10-31",
+ "as_of": "2026-11-09",
  "source": "https://api.nearblocks.io/v1/charts",
- "n_days": 2294,
+ "n_days": 2303,
  "active": {
   "label": "daily active accounts",
-  "avg_30d": 72377.86666666667,
-  "avg_30d_year_ago": 273258.4666666667,
-  "yoy_pct": -73.5130378393887,
-  "calc": "mean of active over the 30 days ending 2026-10-31 vs the 30 days ending 2025-10-31"
+  "avg_30d": 58222.73333333333,
+  "avg_30d_year_ago": 262972.5,
+  "yoy_pct": -77.85976353674498,
+  "calc": "mean of active over the 30 days ending 2026-11-09 vs the 30 days ending 2025-11-09"
  },
  "txns": {
   "label": "daily transactions",
-  "avg_30d": 715881.4333333333,
-  "avg_30d_year_ago": 4544988.966666667,
-  "yoy_pct": -84.24899513324084,
-  "calc": "mean of txns over the 30 days ending 2026-10-31 vs the 30 days ending 2025-10-31"
+  "avg_30d": 662519.5666666667,
+  "avg_30d_year_ago": 4444289.7,
+  "yoy_pct": -85.09279071824083,
+  "calc": "mean of txns over the 30 days ending 2026-11-09 vs the 30 days ending 2025-11-09"
  },
  "fee_usd": {
   "label": "daily fees (USD)",
-  "avg_30d": 6011.901144475,
-  "avg_30d_year_ago": 8307.179553272334,
-  "yoy_pct": -27.63005655623738,
-  "calc": "mean of fee_usd over the 30 days ending 2026-10-31 vs the 30 days ending 2025-10-31"
+  "avg_30d": 5187.932412403667,
+  "avg_30d_year_ago": 7489.607860245,
+  "yoy_pct": -30.731588232525176,
+  "calc": "mean of fee_usd over the 30 days ending 2026-11-09 vs the 30 days ending 2025-11-09"
  },
  "new_acc": {
   "label": "daily new accounts",
-  "avg_30d": 9318.033333333333,
-  "avg_30d_year_ago": 245483.33333333334,
-  "yoy_pct": -96.20420938285015,
-  "calc": "mean of new_acc over the 30 days ending 2026-10-31 vs the 30 days ending 2025-10-31"
+  "avg_30d": 9573.133333333333,
+  "avg_30d_year_ago": 220745.33333333334,
+  "yoy_pct": -95.6632680796574,
+  "calc": "mean of new_acc over the 30 days ending 2026-11-09 vs the 30 days ending 2025-11-09"
  },
  "vol_usd": {
   "label": "daily transfer volume (USD)",
-  "avg_30d": 249030954.2505282,
-  "avg_30d_year_ago": 78875379.60031004,
-  "yoy_pct": 215.72710713084072,
-  "calc": "mean of vol_usd over the 30 days ending 2026-10-31 vs the 30 days ending 2025-10-31"
+  "avg_30d": 195806804.57473177,
+  "avg_30d_year_ago": 86857257.50034687,
+  "yoy_pct": 125.43516824020125,
+  "calc": "mean of vol_usd over the 30 days ending 2026-11-09 vs the 30 days ending 2025-11-09"
  },
  "active_contracts": {
   "label": "daily active contracts",
-  "avg_30d": 57650.066666666666,
-  "avg_30d_year_ago": 2639702.566666667,
-  "yoy_pct": -97.81603929947815,
-  "calc": "mean of active_contracts over the 30 days ending 2026-10-31 vs the 30 days ending 2025-10-31"
+  "avg_30d": 61733.9,
+  "avg_30d_year_ago": 2614377.6666666665,
+  "yoy_pct": -97.6386770439823,
+  "calc": "mean of active_contracts over the 30 days ending 2026-11-09 vs the 30 days ending 2025-11-09"
  },
  "price": {
   "label": "NEAR price (USD)",
-  "avg_30d": 4.887221243666667,
-  "avg_30d_year_ago": 2.4885172336666668,
-  "yoy_pct": 96.39089404519281,
-  "calc": "mean of price over the 30 days ending 2026-10-31 vs the 30 days ending 2025-10-31"
+  "avg_30d": 4.581360218666666,
+  "avg_30d_year_ago": 2.266914536,
+  "yoy_pct": 102.09673306654672,
+  "calc": "mean of price over the 30 days ending 2026-11-09 vs the 30 days ending 2025-11-09"
  },
  "w90": {
   "active": {
-   "avg_90d": 71890.4,
-   "avg_90d_year_ago": 300542.3222222222,
-   "yoy_pct": -76.0797748987765
+   "avg_90d": 70685.84444444445,
+   "avg_90d_year_ago": 291782.76666666666,
+   "yoy_pct": -75.77449646805353
   },
   "txns": {
-   "avg_90d": 737899.1777777778,
-   "avg_90d_year_ago": 4730166.033333333,
-   "yoy_pct": -84.40014213924363
+   "avg_90d": 738704.1666666666,
+   "avg_90d_year_ago": 4651132.355555556,
+   "yoy_pct": -84.11775649032391
   },
   "fee_usd": {
-   "avg_90d": 3893.4840727408887,
-   "avg_90d_year_ago": 8844.213828172333,
-   "yoy_pct": -55.9770472719848
+   "avg_90d": 4073.698482173111,
+   "avg_90d_year_ago": 8648.809581617334,
+   "yoy_pct": -52.898737754250256
   },
   "vol_usd": {
-   "avg_90d": 178627353.3139594,
-   "avg_90d_year_ago": 64887720.14792913,
-   "yoy_pct": 175.28683841369363
+   "avg_90d": 187123175.4264004,
+   "avg_90d_year_ago": 70447912.65840037,
+   "yoy_pct": 165.619190640544
   },
   "new_acc": {
-   "avg_90d": 11406.3,
-   "avg_90d_year_ago": 270116.44444444444,
-   "yoy_pct": -95.77726560726074
+   "avg_90d": 11033.3,
+   "avg_90d_year_ago": 251780.64444444445,
+   "yoy_pct": -95.61789190573205
   },
   "price": {
-   "avg_90d": 3.3130436284444444,
-   "avg_90d_year_ago": 2.6051622273333335,
-   "yoy_pct": 27.17225797626064
+   "avg_90d": 3.5371451345555553,
+   "avg_90d_year_ago": 2.5687123025555554,
+   "yoy_pct": 37.70110148328123
   },
-  "calc": "90-day means ending 2026-10-31 vs ending 2025-10-31"
+  "calc": "90-day means ending 2026-11-09 vs ending 2025-11-09"
  },
  "vol_near": {
-  "avg_30d": 50095531.73832515,
-  "avg_30d_year_ago": 32038721.10385468,
-  "yoy_pct": 56.359336491424436,
+  "avg_30d": 41366309.13897686,
+  "avg_30d_year_ago": 37761683.91132962,
+  "yoy_pct": 9.545721626481129,
   "calc": "30-day mean of daily txn_volume_usd / near_price, i.e. transfer volume counted in NEAR"
+ },
+ "paradox": {
+  "usd_volume_x": 2.2543516824020124,
+  "price_x": 2.020967330665467,
+  "near_volume_x": 1.0954572162648113,
+  "txns_x": 0.14907209281759168,
+  "near_per_txn_now": 62.84221504222395,
+  "near_per_txn_year_ago": 8.55565635713797,
+  "near_per_txn_x": 7.345107425895477,
+  "share_of_usd_growth_from_price": 0.8655539337840573,
+  "share_of_usd_growth_from_near_moved": 0.11216144568457834,
+  "calc": "ratios of 30-day means, now vs a year earlier; near_per_txn = daily (txn_volume_usd / near_price) / txns; shares are log(ratio) / log(usd ratio), and the two do not sum to exactly 1 because a mean of ratios is not a ratio of means"
+ },
+ "txn_step": {
+  "month": "2026-04",
+  "change_pct": -72.79283564720006,
+  "txns_month_before": 3479268.870967742,
+  "txns_month": 946610.4,
+  "active_change_pct_same_month": -9.553736745888298,
+  "share_of_12m_txn_fall": 0.6697018543365042,
+  "calc": "largest month-over-month % fall in monthly mean daily transactions since Jan 2025 (complete months only); active change is for the same pair of months; share = that one-month fall / the whole year-over-year fall in the 30-day mean"
  },
  "active_peak": {
   "date": "2024-04-22",
   "value": 2256512.0,
-  "current_vs_peak_pct": -96.79248917503355,
+  "current_vs_peak_pct": -97.4197906621665,
   "calc": "max single-day active_accounts in the full history vs current 30-day mean"
  },
  "supply": {
-  "total_now": 1310472976.2021549,
-  "total_year_ago": 1278798435.4156814,
-  "growth_pct": 2.4768986189897424,
-  "calc": "total_supply on 2026-10-31 vs 2025-10-31 (NEAR = yocto/1e24)"
+  "total_now": 1311293172.4180355,
+  "total_year_ago": 1279550547.159592,
+  "growth_pct": 2.4807636813494627,
+  "calc": "total_supply on 2026-11-09 vs 2025-11-09 (NEAR = yocto/1e24)"
  },
  "fees": {
-  "fees_usd_365d": 1205989.00580557,
-  "mcap_now": 5618248309.398652,
-  "mcap_to_fees": 4658.623156888404,
-  "issuance_usd_365d": 135802851.52226192,
+  "fees_usd_365d": 1170025.19187073,
+  "mcap_now": 4694985121.055181,
+  "mcap_to_fees": 4012.7213958089765,
+  "issuance_usd_365d": 113660913.1733585,
   "calc": "sum txn_fee_usd over last 365 days; issuance = supply growth x current price"
  },
  "fee_per_active": {
-  "now": 0.08306270164279043,
-  "year_ago": 0.03040044707345085,
+  "now": 0.08910492715451926,
+  "year_ago": 0.028480574433619486,
   "calc": "30-day mean fee_usd / 30-day mean active accounts"
  },
  "lead": {
-  "corr_active_change_vs_next_3m_price": 0.17049431511229005,
-  "n_months": 54,
+  "corr_active_change_vs_next_3m_price": 0.1551697643829994,
+  "n_months": 55,
   "calc": "Pearson r between monthly % change in mean active accounts and the % change in mean price over the following 3 months, Jan 2022 on"
  },
  "level_corr": {
-  "corr_active_vs_price_monthly": 0.1336708476840631,
-  "n_months": 58,
+  "corr_active_vs_price_monthly": 0.13279762063047992,
+  "n_months": 59,
   "calc": "Pearson r of monthly mean active accounts vs monthly mean price, Jan 2022 on"
  },
  "intents": {
-  "n_sampled_days": 52,
+  "n_sampled_days": 53,
   "first_day": "2025-11-09",
-  "last_day": "2026-11-01",
+  "last_day": "2026-11-08",
   "swaps_first4": 12155.5,
-  "swaps_last4": 14346,
+  "swaps_last4": 14232.75,
   "usd_first4": 34987110.982700184,
-  "usd_last4": 31295321.010502547,
-  "swaps_change_pct": 18.020649088889805,
-  "usd_change_pct": -10.551857151117993,
-  "usd_per_swap_last4": 2181.466681339924,
-  "annualised_usd_last4": 11422792168.83343,
+  "usd_last4": 29230011.198982067,
+  "swaps_change_pct": 17.088972070256258,
+  "usd_change_pct": -16.454916173458244,
+  "usd_per_swap_last4": 2053.7149320392805,
+  "annualised_usd_last4": 10668954087.628454,
   "calc": "successful 1Click swaps on one full UTC Sunday per week (Explorer API); mean of the first 4 sampled Sundays vs the last 4"
  },
  "intents_weekly": {
@@ -346,7 +367,584 @@
   "2026-11-01": {
    "swaps": 16728,
    "usd": 26466985.311316907
+  },
+  "2026-11-08": {
+   "swaps": 14650,
+   "usd": 26301136.996156394
   }
+ },
+ "apps": {
+  "fees_avg_30d": 222284.20766666665,
+  "fees_avg_30d_year_ago": 151339.73333333334,
+  "fees_yoy_pct": 46.87762610039399,
+  "fees_usd_365d": 59295359.42,
+  "intents_share_30d": 0.8735201450950878,
+  "intents_share_30d_year_ago": 0.8478555532453254,
+  "protocols_over_100_usd_a_day": 4,
+  "x_gas_fees": 50.678703186889365,
+  "source": "https://api.llama.fi/overview/fees/near",
+  "calc": "DefiLlama daily fees paid by users of apps on NEAR (the chain's own gas is not in this total); 30-day means ending 2026-11-09 vs ending 2025-11-09; 365-day sum; intents_share = NEAR Intents fees / all app fees over the same 30 days; protocols_over_100_usd_a_day = apps averaging at least $100 a day in fees over those 30 days; x_gas_fees = app fees / chain gas fees, both over 365 days"
+ },
+ "intents_daily": {
+  "first_day": "2025-05-10",
+  "fees_avg_30d": 194169.73333333334,
+  "fees_avg_30d_year_ago": 128314.23333333334,
+  "fees_yoy_pct": 51.323612579222825,
+  "fees_usd_365d": 53904731.0,
+  "revenue_avg_30d": 61268.566666666666,
+  "revenue_avg_30d_year_ago": 14105.833333333334,
+  "revenue_yoy_pct": 334.3491463342589,
+  "revenue_usd_365d": 9297507.05,
+  "revenue_annualised": 22363026.833333332,
+  "kept_share_30d": 0.3155412824381143,
+  "source": "https://api.llama.fi/summary/fees/near-intents",
+  "calc": "DefiLlama, every day (not a sample): gross fees on NEAR Intents swaps, and the part NEAR keeps (revenue); 30-day means ending 2026-11-09 vs ending 2025-11-09; annualised = last 30 days x 365/30; kept_share = revenue / gross fees over 30 days"
+ },
+ "holders": {
+  "first_day": "2026-02-23",
+  "days": 260,
+  "usd_since_first_day": 7950643.21,
+  "avg_30d": 61273.73333333333,
+  "annualised": 22364912.666666664,
+  "cover_of_issuance_pct": 19.676872235361277,
+  "gas_cover_of_issuance_pct": 1.0293997815116775,
+  "mcap_to_annualised": 209.92637847643942,
+  "x_to_cover_issuance": 5.082108518257804,
+  "source": "https://api.llama.fi/overview/fees/near?dataType=dailyHoldersRevenue",
+  "calc": "DefiLlama revenue returned to NEAR holders on NEAR (NEAR Intents revenue used to buy back NEAR since 2026-02-23; the series starts that day); annualised = last 30 days x 365/30; cover = annualised / (supply growth over 365 days x current price); gas_cover = 365-day gas fees / the same issuance"
+ },
+ "valuation": {
+  "mcap_now": 4694985121.055181,
+  "mcap_to_gas_fees": 4012.7213958089765,
+  "mcap_to_app_fees": 79.17963845702886,
+  "calc": "market cap on the last day / 365-day gas fees, and / 365-day app fees, and / annualised NEAR Intents revenue",
+  "mcap_to_intents_revenue_annualised": 209.94408118569373
+ },
+ "tvl": {
+  "label": "total value locked on NEAR (USD)",
+  "avg_30d": 213061627.8,
+  "avg_30d_year_ago": 147798268.56666666,
+  "yoy_pct": 44.15705262737588,
+  "calc": "DefiLlama; 30-day mean ending 2026-11-09 vs ending 2025-11-09"
+ },
+ "dex": {
+  "label": "daily exchange volume on NEAR (USD)",
+  "avg_30d": 134159518.04733333,
+  "avg_30d_year_ago": 109397524.5,
+  "yoy_pct": 22.63487557008965,
+  "calc": "DefiLlama; 30-day mean ending 2026-11-09 vs ending 2025-11-09"
+ },
+ "stables": {
+  "label": "stablecoin supply on NEAR (USD)",
+  "avg_30d": 129098830.56666666,
+  "avg_30d_year_ago": 228740118.83333334,
+  "yoy_pct": -43.56091479486736,
+  "calc": "DefiLlama; 30-day mean ending 2026-11-09 vs ending 2025-11-09"
+ },
+ "monthly2": {
+  "2020-10": {
+   "gas_fees": 126.87
+  },
+  "2020-11": {
+   "gas_fees": 1518.7
+  },
+  "2020-12": {
+   "gas_fees": 1653.85
+  },
+  "2021-01": {
+   "gas_fees": 1485.55
+  },
+  "2021-02": {
+   "gas_fees": 892.0
+  },
+  "2021-03": {
+   "gas_fees": 5114.0
+  },
+  "2021-04": {
+   "gas_fees": 11305.0
+  },
+  "2021-05": {
+   "gas_fees": 16065.0
+  },
+  "2021-06": {
+   "gas_fees": 12465.0
+  },
+  "2021-07": {
+   "gas_fees": 12291.0
+  },
+  "2021-08": {
+   "gas_fees": 30658.0,
+   "tvl": 1965118.5833333333
+  },
+  "2021-09": {
+   "gas_fees": 73456.0,
+   "tvl": 52443667.56666667
+  },
+  "2021-10": {
+   "gas_fees": 102812.0,
+   "tvl": 81882417.38709678
+  },
+  "2021-11": {
+   "gas_fees": 136130.0,
+   "tvl": 103196937.93333334
+  },
+  "2021-12": {
+   "gas_fees": 285676.0,
+   "tvl": 74381010.32258065
+  },
+  "2022-01": {
+   "gas_fees": 935358.0,
+   "tvl": 90860505.70967741
+  },
+  "2022-02": {
+   "gas_fees": 418718.0,
+   "tvl": 76710258.67857143
+  },
+  "2022-03": {
+   "gas_fees": 371035.0,
+   "tvl": 109411530.93548387
+  },
+  "2022-04": {
+   "gas_fees": 662070.0,
+   "tvl": 283819667.76666665
+  },
+  "2022-05": {
+   "gas_fees": 348330.0,
+   "tvl": 406459760.58064514
+  },
+  "2022-06": {
+   "gas_fees": 147971.0,
+   "tvl": 305222064.9
+  },
+  "2022-07": {
+   "gas_fees": 57131.0,
+   "stables": 124811945.77272727,
+   "tvl": 281318694.58064514
+  },
+  "2022-08": {
+   "gas_fees": 62343.0,
+   "stables": 183013007.0967742,
+   "tvl": 308605737.9677419
+  },
+  "2022-09": {
+   "gas_fees": 93714.0,
+   "stables": 269604203.06666666,
+   "tvl": 285589870.1333333
+  },
+  "2022-10": {
+   "gas_fees": 73845.0,
+   "stables": 243368900.5483871,
+   "tvl": 231856904.16129032
+  },
+  "2022-11": {
+   "gas_fees": 49345.0,
+   "stables": 121607735.93333334,
+   "tvl": 96089316.6
+  },
+  "2022-12": {
+   "gas_fees": 28999.0,
+   "stables": 109316950.29032259,
+   "tvl": 70259479.67741935
+  },
+  "2023-01": {
+   "gas_fees": 39569.0,
+   "stables": 107746752.90322581,
+   "tvl": 73554051.51612903
+  },
+  "2023-02": {
+   "gas_fees": 42756.0,
+   "stables": 105492667.82142857,
+   "tvl": 76543403.57142857
+  },
+  "2023-03": {
+   "gas_fees": 37221.0,
+   "stables": 96962227.61290322,
+   "tvl": 56705809.38709678
+  },
+  "2023-04": {
+   "gas_fees": 36540.0,
+   "stables": 92058979.03333333,
+   "tvl": 32614156.333333332
+  },
+  "2023-05": {
+   "gas_fees": 29661.0,
+   "stables": 94749767.03225806,
+   "tvl": 28769752.096774194
+  },
+  "2023-06": {
+   "gas_fees": 20813.0,
+   "stables": 79345781.9,
+   "tvl": 27671223.0
+  },
+  "2023-07": {
+   "gas_fees": 20472.0,
+   "stables": 99196004.0,
+   "tvl": 28956655.93548387
+  },
+  "2023-08": {
+   "gas_fees": 22768.0,
+   "stables": 85497666.74193548,
+   "tvl": 25209889.387096774
+  },
+  "2023-09": {
+   "gas_fees": 57204.0,
+   "stables": 83034311.23333333,
+   "tvl": 26695844.533333335
+  },
+  "2023-10": {
+   "gas_fees": 62594.0,
+   "stables": 83378139.80645162,
+   "tvl": 29078449.29032258
+  },
+  "2023-11": {
+   "gas_fees": 224058.0,
+   "stables": 87353624.7,
+   "tvl": 42274360.166666664
+  },
+  "2023-12": {
+   "gas_fees": 794401.0,
+   "stables": 84619866.16129032,
+   "tvl": 64930472.03225806
+  },
+  "2024-01": {
+   "app_fees": 9649.0,
+   "gas_fees": 308418.0,
+   "stables": 86812807.06451613,
+   "tvl": 85459592.19354838
+  },
+  "2024-02": {
+   "app_fees": 1.0,
+   "gas_fees": 462435.0,
+   "stables": 91075763.51724137,
+   "tvl": 105927060.2413793
+  },
+  "2024-03": {
+   "app_fees": 94250.0,
+   "gas_fees": 1172462.0,
+   "stables": 144493488.12903225,
+   "tvl": 224607250.61290324
+  },
+  "2024-04": {
+   "app_fees": 52.0,
+   "gas_fees": 1063500.0,
+   "stables": 248277621.03333333,
+   "tvl": 273902584.06666666
+  },
+  "2024-05": {
+   "app_fees": 126.0,
+   "gas_fees": 933743.0,
+   "stables": 405255816.16129035,
+   "tvl": 326725527.2580645
+  },
+  "2024-06": {
+   "app_fees": 90.0,
+   "gas_fees": 790204.0,
+   "stables": 491165420.26666665,
+   "tvl": 264642368.66666666
+  },
+  "2024-07": {
+   "app_fees": 87.0,
+   "gas_fees": 650548.0,
+   "stables": 627929124.6129032,
+   "tvl": 246107928.70967743
+  },
+  "2024-08": {
+   "app_fees": 299.0,
+   "gas_fees": 473791.0,
+   "stables": 648465010.451613,
+   "tvl": 204458972.3548387
+  },
+  "2024-09": {
+   "app_fees": 124119.0,
+   "gas_fees": 538834.0,
+   "stables": 644149612.9,
+   "tvl": 212367474.13333333
+  },
+  "2024-10": {
+   "app_fees": 171191.0,
+   "gas_fees": 543532.0,
+   "stables": 669103306.032258,
+   "tvl": 228137225.41935483
+  },
+  "2024-11": {
+   "app_fees": 428199.0,
+   "gas_fees": 652944.0,
+   "stables": 406228113.5,
+   "tvl": 251731913.1
+  },
+  "2024-12": {
+   "app_fees": 418027.0,
+   "gas_fees": 919744.0,
+   "stables": 357694960.6451613,
+   "tvl": 291224154.9354839
+  },
+  "2025-01": {
+   "app_fees": 219138.0,
+   "gas_fees": 679710.0,
+   "stables": 331110739.7741935,
+   "tvl": 246188397.6451613
+  },
+  "2025-02": {
+   "app_fees": 251432.0,
+   "gas_fees": 386115.0,
+   "stables": 377085132.6785714,
+   "tvl": 177708993.07142857
+  },
+  "2025-03": {
+   "app_fees": 203427.0,
+   "gas_fees": 347333.0,
+   "stables": 392243794.9677419,
+   "tvl": 159211970.32258064
+  },
+  "2025-04": {
+   "app_fees": 99957.0,
+   "gas_fees": 275681.0,
+   "stables": 441518089.4,
+   "tvl": 142391703.7
+  },
+  "2025-05": {
+   "app_fees": 342294.0,
+   "gas_fees": 303743.0,
+   "intents_revenue": 0.0,
+   "intents_fees": 96.0,
+   "stables": 450201335.516129,
+   "tvl": 164684675.22580644
+  },
+  "2025-06": {
+   "app_fees": 798978.98,
+   "gas_fees": 232954.0,
+   "intents_revenue": 0.0,
+   "intents_fees": 95436.98,
+   "stables": 260126898.46666667,
+   "tvl": 144728202.4
+  },
+  "2025-07": {
+   "app_fees": 886796.0,
+   "gas_fees": 270400.0,
+   "intents_revenue": 0.0,
+   "intents_fees": 217997.0,
+   "stables": 243680831.03225806,
+   "tvl": 161337871.6451613
+  },
+  "2025-08": {
+   "app_fees": 1335648.0,
+   "gas_fees": 282612.0,
+   "intents_revenue": 0.0,
+   "intents_fees": 419519.0,
+   "stables": 222120439.06451613,
+   "tvl": 163044338.19354838
+  },
+  "2025-09": {
+   "app_fees": 1549099.0,
+   "gas_fees": 274749.0,
+   "intents_revenue": 18.0,
+   "intents_fees": 712949.0,
+   "stables": 220194989.73333332,
+   "tvl": 130872594.4
+  },
+  "2025-10": {
+   "app_fees": 3200721.0,
+   "gas_fees": 256071.0,
+   "intents_revenue": 18.0,
+   "intents_fees": 2496648.0,
+   "stables": 250301903.12903225,
+   "tvl": 156932804.83870968
+  },
+  "2025-11": {
+   "app_fees": 8398419.7,
+   "gas_fees": 214880.0,
+   "intents_revenue": 768047.0,
+   "intents_fees": 7758092.0,
+   "stables": 171101314.7,
+   "tvl": 155057711.23333332
+  },
+  "2025-12": {
+   "app_fees": 4461751.64,
+   "gas_fees": 138999.0,
+   "intents_revenue": 176629.0,
+   "intents_fees": 4116558.0,
+   "stables": 122460107.25806452,
+   "tvl": 121762807.38709678
+  },
+  "2026-01": {
+   "app_fees": 4768447.87,
+   "gas_fees": 129803.0,
+   "intents_revenue": 359240.0,
+   "intents_fees": 4410217.0,
+   "stables": 121604336.38709678,
+   "tvl": 123591047.83870968
+  },
+  "2026-02": {
+   "app_fees": 4336124.11,
+   "gas_fees": 77518.0,
+   "intents_revenue": 663127.0,
+   "intents_fees": 4134501.0,
+   "stables": 120454195.0,
+   "tvl": 85486746.71428572
+  },
+  "2026-03": {
+   "app_fees": 3861289.9499999997,
+   "gas_fees": 102360.0,
+   "intents_revenue": 563460.0,
+   "intents_fees": 3590113.0,
+   "stables": 120367281.70967741,
+   "tvl": 92900106.4516129
+  },
+  "2026-04": {
+   "app_fees": 3537580.5,
+   "gas_fees": 31664.0,
+   "intents_revenue": 258740.05,
+   "intents_fees": 3207256.0,
+   "stables": 121024008.53333333,
+   "tvl": 92617922.0
+  },
+  "2026-05": {
+   "app_fees": 3330027.61,
+   "gas_fees": 49584.0,
+   "intents_revenue": 619614.0,
+   "intents_fees": 3002309.0,
+   "stables": 120164674.80645162,
+   "tvl": 115081585.29032259
+  },
+  "2026-06": {
+   "app_fees": 3538673.6999999997,
+   "gas_fees": 59181.0,
+   "intents_revenue": 619475.0,
+   "intents_fees": 3111812.0,
+   "stables": 115246747.06666666,
+   "tvl": 121391510.56666666
+  },
+  "2026-07": {
+   "app_fees": 3502383.96,
+   "gas_fees": 47072.0,
+   "intents_revenue": 504864.0,
+   "intents_fees": 3271913.0,
+   "stables": 110901742.38709678,
+   "tvl": 107662799.70967741
+  },
+  "2026-08": {
+   "app_fees": 4087904.47,
+   "gas_fees": 45928.0,
+   "intents_revenue": 723262.0,
+   "intents_fees": 3836975.0,
+   "stables": 121528987.83870968,
+   "tvl": 93112764.67741935
+  },
+  "2026-09": {
+   "app_fees": 8272433.07,
+   "gas_fees": 115406.0,
+   "intents_revenue": 1839513.0,
+   "intents_fees": 7325792.0,
+   "stables": 90311054.13333334,
+   "tvl": 164189491.63333333
+  },
+  "2026-10": {
+   "app_fees": 7547045.14,
+   "gas_fees": 197685.0,
+   "intents_revenue": 2189521.0,
+   "intents_fees": 6388076.0,
+   "stables": 124000079.61290322,
+   "tvl": 228177748.83870968
+  },
+  "2026-11": {
+   "app_fees": 2023854.7,
+   "gas_fees": 27813.0,
+   "intents_revenue": 435190.0,
+   "intents_fees": 1860143.0,
+   "stables": 129365830.77777778,
+   "tvl": 181889278.44444445
+  }
+ },
+ "crosscheck": {
+  "gas_fees_365d_nearblocks": 1170025.19187073,
+  "gas_fees_365d_defillama": 1170387.0,
+  "gas_fees_diff_pct": 0.030923105911218052,
+  "gas_fees_abs_diff_pct": 0.030923105911218052,
+  "gas_fee_days_compared": 365,
+  "price_30d_nearblocks": 4.581360218666666,
+  "price_30d_coingecko": 4.58136021915076,
+  "price_diff_pct": 1.0566592045790912e-08,
+  "price_days_compared": 30,
+  "calc": "the same days from two providers: gas fees summed over 365 days (NearBlocks txn_fee_usd vs DefiLlama, whose data comes from Allium), and the 30-day mean price (NearBlocks vs CoinGecko); diff = second source / NearBlocks - 1",
+  "bq_active_vs_nearblocks_pct": 0.0,
+  "bq_txns_vs_nearblocks_pct": 0.0,
+  "bq_txns_largest_daily_drop_pct": 71.70869003153516,
+  "bq_txns_largest_drop_date": "2026-04-02",
+  "bq_txns_bigquery_days": 365
+ },
+ "leadlag": {
+  "n_weeks": 79,
+  "first_week": "2025-05-10",
+  "last_week": "2026-11-09",
+  "better_leading_indicator": "neither",
+  "calc": "Pearson correlation between weekly % change of the indicator (NEAR Intents fees from DefiLlama, NEAR price from CoinGecko) and weekly % change of daily active accounts, with the indicator leading by 0, 4, 8 or 12 weeks. Weekly blocks are consecutive 7-day periods ending at the overall end date; each week's value is the mean of the days present in the series. better_leading_indicator is chosen among lags 4, 8, 12 weeks: 'neither' if both max absolute correlations are <0.2, otherwise the one with the larger absolute correlation.",
+  "intents_fees_to_active_n_lag0w": 78,
+  "intents_fees_to_active_ci_low_lag0w": -0.23693351318625705,
+  "intents_fees_to_active_ci_high_lag0w": 0.2080381634351081,
+  "intents_fees_to_active_p_lag0w": 0.8952625735230128,
+  "price_to_active_n_lag0w": 51,
+  "price_to_active_ci_low_lag0w": -0.4547476861527054,
+  "price_to_active_ci_high_lag0w": 0.07499265170917672,
+  "price_to_active_p_lag0w": 0.15002069502867857,
+  "intents_fees_to_active_corr_lag0w": -0.015200251826497035,
+  "price_to_active_corr_lag0w": -0.2048290475138992,
+  "intents_fees_to_active_n_lag4w": 74,
+  "intents_fees_to_active_ci_low_lag4w": -0.22276525732015154,
+  "intents_fees_to_active_ci_high_lag4w": 0.2342244957083861,
+  "intents_fees_to_active_p_lag4w": 0.959374271039851,
+  "price_to_active_n_lag4w": 47,
+  "price_to_active_ci_low_lag4w": -0.25551434486865615,
+  "price_to_active_ci_high_lag4w": 0.318214093130452,
+  "price_to_active_p_lag4w": 0.8206503379636094,
+  "intents_fees_to_active_corr_lag4w": 0.0060452521910111376,
+  "price_to_active_corr_lag4w": 0.034164306176633234,
+  "intents_fees_to_active_n_lag8w": 70,
+  "intents_fees_to_active_ci_low_lag8w": -0.24543640805895175,
+  "intents_fees_to_active_ci_high_lag8w": 0.224465259627719,
+  "intents_fees_to_active_p_lag8w": 0.9276140307226769,
+  "price_to_active_n_lag8w": 43,
+  "price_to_active_ci_low_lag8w": -0.3741389996927774,
+  "price_to_active_ci_high_lag8w": 0.22277987154025883,
+  "price_to_active_p_lag8w": 0.5982026456063853,
+  "intents_fees_to_active_corr_lag8w": -0.01109829227622816,
+  "price_to_active_corr_lag8w": -0.08313165208839028,
+  "intents_fees_to_active_n_lag12w": 66,
+  "intents_fees_to_active_ci_low_lag12w": -0.2610476453508493,
+  "intents_fees_to_active_ci_high_lag12w": 0.22283877943494623,
+  "intents_fees_to_active_p_lag12w": 0.8720217967072261,
+  "price_to_active_n_lag12w": 39,
+  "price_to_active_ci_low_lag12w": -0.2958039942073061,
+  "price_to_active_ci_high_lag12w": 0.33497214344841214,
+  "price_to_active_p_lag12w": 0.8961626859455101,
+  "intents_fees_to_active_corr_lag12w": -0.020292761234833093,
+  "price_to_active_corr_lag12w": 0.021748290943258728
+ },
+ "windows": {
+  "active_accounts_30d_mean_vs_30d_ago_pct": -22.87310470414001,
+  "active_accounts_30d_mean_vs_90d_ago_pct": -32.219202726316354,
+  "active_accounts_30d_mean_vs_180d_ago_pct": -53.709836900162266,
+  "active_accounts_30d_mean_vs_365d_ago_pct": -77.85976353674498,
+  "active_accounts_30d_mean_vs_730d_ago_pct": -94.02675754305322,
+  "transactions_30d_mean_vs_30d_ago_pct": -22.625325557709917,
+  "transactions_30d_mean_vs_90d_ago_pct": -5.5858959612478,
+  "transactions_30d_mean_vs_180d_ago_pct": -13.750917576345223,
+  "transactions_30d_mean_vs_365d_ago_pct": -85.09279071824083,
+  "transactions_30d_mean_vs_730d_ago_pct": -90.55740314335074,
+  "app_fees_last_30d_vs_prior_30d_pct": -28.307840670402197,
+  "app_fees_last_90d_vs_prior_90d_pct": 111.47336419461102,
+  "app_fees_last_365d_vs_prior_365d_pct": 392.33622036923,
+  "step_new_accounts_14d_before": 128708.21428571429,
+  "step_new_accounts_14d_after": 20522.285714285714,
+  "step_new_accounts_change_pct": -84.05518573295633,
+  "step_active_contracts_14d_before": 2130093.4285714286,
+  "step_active_contracts_14d_after": 169872.2857142857,
+  "step_active_contracts_change_pct": -92.025125121943,
+  "step_transactions_14d_before": 3701861.9285714286,
+  "step_transactions_14d_after": 930476.5714285715,
+  "step_transactions_change_pct": -74.86463327421701,
+  "step_active_accounts_14d_before": 138155.7857142857,
+  "step_active_accounts_14d_after": 132707.42857142858,
+  "step_active_accounts_change_pct": -3.9436329898804634
  },
  "monthly": {
   "2020-07": {
@@ -880,6 +1478,13 @@
    "txns": 729933.3870967742,
    "fee_usd": 196207.59002128,
    "new_acc": 9503.58064516129
+  },
+  "2026-11": {
+   "active": 70799.0,
+   "price": 3.899943121111111,
+   "txns": 676566.4444444445,
+   "fee_usd": 28372.97160532,
+   "new_acc": 9651.444444444445
   }
  }
 }

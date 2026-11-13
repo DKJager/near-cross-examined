@@ -1,0 +1,17 @@
+# Source files that are hashed in SHA256SUMS (as fetched, dates in MANIFEST.json) but NOT shipped in this repository.
+# Their providers' terms bar republishing or redistribution, or are unclear. python3 fetch.py downloads them again.
+charts_raw.json
+stats_raw.json
+coingecko_near.json
+intents_days.json
+intents_sundays.csv
+nearblocks_daily.csv
+llama_dex_near.json
+llama_fees_near.json
+llama_gas_fees_near.json
+llama_holders_revenue_near.json
+llama_intents_fees.json
+llama_intents_revenue.json
+llama_revenue_near.json
+llama_stablecoins_near.json
+llama_tvl_near.json
