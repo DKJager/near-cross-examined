@@ -317,265 +317,262 @@ def build() -> None:
 
     css = """body {
     background: #0b0f14;
-    color: #e6edf3;
-    font: 17px/1.6 system-ui, sans-serif;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 20px;
+    color: #c9d1d9;
+    font: 17px/1.6 system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 40px 20px;
     overflow-x: hidden;
 }
 
-.container {
-    max-width: 760px;
-    margin: 0 auto;
-}
-
 .wide-container {
-    max-width: 980px;
+    max-width: 1040px;
     margin: 0 auto;
 }
 
 h1 {
-    font-size: 2em;
-    margin: 0.5em 0 0.2em;
-    line-height: 1.2;
-}
-
-.mut {
-    color: #88929c;
-    font-size: 0.95em;
+    font-size: 2.5em;
+    font-weight: 700;
+    margin: 0 0 0.5em;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
 }
 
 .thesis {
-    margin: 1.5em 0;
-    font-size: 1.3em;
-    font-weight: 600;
-    line-height: 1.4;
+    font-size: 1.25em;
+    color: #8b949e;
+    margin: 0 0 3em;
+    font-weight: 400;
+    max-width: 760px;
 }
 
 .hero-row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    margin: 2em 0;
+    margin-bottom: 40px;
 }
 
 .herocell {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .hero {
-    background: #1a222d;
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 10px;
+    background: #121a22;
+    border: 1px solid #26313c;
+    border-radius: 8px;
+    padding: 24px;
+    flex: 0 0 auto;
+    min-height: 168px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .hero .l {
-    font-size: 0.9em;
-    color: #88929c;
-    margin-bottom: 8px;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #9aa4ae;
+    margin-bottom: 12px;
 }
 
 .hero .n {
-    font-size: 2.2em;
+    font-size: 3.5em;
     font-weight: 700;
     color: #00ec97;
-    line-height: 1.1;
+    line-height: 1;
+    margin-bottom: 16px;
+    letter-spacing: -0.03em;
 }
 
 .means {
+    min-height: 4.2em;
+    margin-top: 12px !important;
     font-size: 0.95em;
-    color: #c9d1d9;
+    color: #a9b3bd;
     margin: 0;
     line-height: 1.4;
 }
 
+.verify {
+    font-size: 0.95em;
+    color: #9aa4ae;
+    margin: -20px 0 40px;
+    padding-top: 10px;
+    border-top: 1px solid #26313c;
+}
+
 .hero-chart {
-    margin: 2em auto;
-    max-width: 760px;
+    max-width: 1040px;
+    margin: 0 auto 60px;
 }
 
 .hero-chart figure {
     margin: 0;
-    background: #1a222d;
-    border-radius: 12px;
-    padding: 15px;
-}
-
-.sec {
-    margin: 1.5em 0;
-    background: #151c25;
+    background: #121a22;
+    border: 1px solid #26313c;
     border-radius: 8px;
-    border: 1px solid #2d3748;
-}
-
-.sec summary {
-    font-weight: 700;
-    font-size: 1.2em;
     padding: 20px;
-    cursor: pointer;
-    color: #e6edf3;
-    list-style: none;
 }
 
-.sec summary::-webkit-details-marker {
+details.sec {
+    border-bottom: 1px solid #26313c;
+    margin: 0;
+    padding: 20px 0;
+}
+
+details.sec summary {
+    font-weight: 600;
+    font-size: 1.1em;
+    cursor: pointer;
+    list-style: none;
+    color: #e6edf3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+details.sec summary::-webkit-details-marker {
     display: none;
 }
 
-.sec summary::after {
-    content: "▼";
-    float: right;
-    font-size: 0.8em;
-    transition: transform 0.2s;
-    color: #88929c;
+details.sec summary::after {
+    content: "+";
+    font-size: 1.2em;
+    color: #00ec97;
 }
 
-.sec[open] summary::after {
-    transform: rotate(180deg);
+details.sec[open] summary::after {
+    content: "−";
 }
 
 .sec .content {
-    padding: 0 20px 20px;
+    margin-top: 16px;
+    color: #8b949e;
+    max-width: 760px;
 }
 
 .kpis {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 15px;
-    margin: 1.5em 0;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin: 2em 0;
 }
 
 .kpi {
-    background: #1a222d;
-    border-radius: 10px;
-    padding: 15px;
+    background: #121a22;
+    border: 1px solid #26313c;
+    border-radius: 6px;
+    padding: 16px;
 }
 
 .kpi .l {
-    font-size: 0.85em;
-    color: #88929c;
+    font-size: 0.8em;
+    color: #484f58;
+    text-transform: uppercase;
     margin-bottom: 8px;
 }
 
 .kpi .n {
-    font-size: 1.6em;
+    font-size: 1.8em;
     font-weight: 700;
     color: #00ec97;
 }
 
 .kpi .d {
     font-size: 0.85em;
-    color: #88929c;
+    color: #8b949e;
 }
 
 .charts {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 20px;
-    margin: 1.5em 0;
-}
-
-figure {
-    margin: 0;
-    background: #1a222d;
-    border-radius: 12px;
-    padding: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 24px;
+    margin: 2em 0;
 }
 
 figcaption {
     font-weight: 600;
-    font-size: 1em;
+    font-size: 0.95em;
     color: #e6edf3;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
 }
 
 .says {
-    margin: 6px 0 0;
-    font-size: 0.9em;
-    color: #c9d1d9;
+    margin: 8px 0 0;
+    font-size: 0.95em;
+    color: #9aa4ae;
 }
 
 svg {
     width: 100%;
     height: auto;
+    overflow: visible;
 }
 
 .t {
-    font-size: 15px;
-    fill: #88929c;
+    font-size: 8px;
+    fill: #9aa4ae;
 }
 
 polyline {
+    fill: none;
     stroke: #00ec97;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
 table {
     border-collapse: collapse;
     width: 100%;
-    font-size: 0.95em;
+    font-size: 0.9em;
+    margin: 1.5em 0;
 }
 
 td, th {
-    border-bottom: 1px solid #2d3748;
-    padding: 8px;
-    vertical-align: top;
+    border-bottom: 1px solid #26313c;
+    padding: 12px 16px;
     text-align: left;
-    color: #e6edf3;
+    color: #c9d1d9;
 }
 
 .v {
-    font-weight: 700;
-    padding: 2px 8px;
+    font-weight: 600;
+    padding: 2px 6px;
     border-radius: 4px;
+    font-size: 0.85em;
 }
 
-.ok {
-    background: #2ecc7133;
-    color: #2ecc71;
-}
-
-.no {
-    background: #e74c3c33;
-    color: #e74c3c;
-}
-
-.mix {
-    background: #f1c40f44;
-    color: #f1c40f;
-}
-
-.na {
-    background: #9993;
-    color: #999;
-}
+.ok { background: rgba(46, 230, 166, 0.15); color: #00ec97; }
+.no { background: rgba(248, 81, 73, 0.15); color: #f85149; }
+.mix { background: rgba(210, 153, 34, 0.15); color: #d29922; }
+.na { background: rgba(110, 118, 129, 0.15); color: #6e7681; }
 
 .side {
-    font-size: 0.8em;
-    padding: 0 6px;
+    font-size: 0.75em;
+    padding: 2px 6px;
     border-radius: 4px;
-    background: #2d3748;
-}
-
-.bull {
-    color: #27ae60;
-}
-
-.bear {
-    color: #c0392b;
+    background: #26313c;
+    color: #8b949e;
 }
 
 blockquote {
-    background: #1a222d;
-    margin: 12px 0;
-    padding: 12px 16px;
-    border-left: 4px solid #6c5ce7;
-    border-radius: 8px;
+    background: #121a22;
+    margin: 1.5em 0;
+    padding: 16px 20px;
+    border-left: 3px solid #00ec97;
+    border-radius: 0 6px 6px 0;
+    color: #8b949e;
 }
 
-.wrap {
-    overflow-x: auto;
-    margin: 1em 0;
+code {
+    background: #161b22;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    color: #00ec97;
 }
 
 a {
@@ -587,55 +584,40 @@ a:hover {
     text-decoration: underline;
 }
 
-ul {
-    line-height: 1.6;
-    padding-left: 1.5em;
+@media (max-width: 768px) {
+    body { padding: 20px 16px; font-size: 16px; }
+    h1 { font-size: 2em; }
+    .thesis { font-size: 1.1em; margin-bottom: 2em; }
+    .hero-row { grid-template-columns: 1fr; gap: 16px; margin-bottom: 24px; }
+    .hero .n { font-size: 3em; }
+    .charts { grid-template-columns: 1fr; }
+    .t { font-size: 20px; }
+    svg text.t:nth-child(even) { display: none; }
 }
+h1 { color: #f0f6fc; }
+@media (max-width: 768px) { .means { min-height: 0; } .hero { min-height: 0; } }
 
-li {
-    margin: 0.5em 0;
-}
+.thesis { color: #e6edf3; font-size: 1.45em; line-height: 1.35; font-weight: 600; max-width: 820px; margin: 0 0 36px; border-left: 4px solid #00ec97; padding-left: 16px; }
+.thesis b { font-weight: 600; }
+.hero .n { font-size: 4.2em; }
+.verify { margin: 0 0 36px; padding-top: 14px; }
+.verify code { color: #00ec97; }
+details.sec > summary { padding: 18px 0; font-size: 1.1em; }
+@media (max-width: 768px) { .thesis { font-size: 1.2em; } .hero .n { font-size: 3.2em; } }
 
-@media (max-width: 600px) {
-    .t { font-size: 21px; }
-    svg text.t:nth-child(3), svg text.t:nth-child(5), svg text.t:nth-child(7), svg text.t:last-child { display: none; }
-    body {
-        font-size: 16px;
-        padding: 12px;
-    }
-    
-    .hero-row {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-    
-    .hero .n {
-        font-size: 1.8em;
-    }
-    
-    .kpis {
-        grid-template-columns: 1fr;
-    }
-    
-    .charts {
-        grid-template-columns: 1fr;
-    }
-    
-    .sec summary {
-        padding: 15px;
-        font-size: 1.1em;
-    }
-    
-    .sec .content {
-        padding: 0 15px 15px;
-    }
-}
+details.sec { max-width: 1040px; margin: 12px auto; border: 1px solid #26313c; border-radius: 10px; background: #121a22; }
+details.sec > summary { padding: 16px 22px; font-size: 1.05em; font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; border: 0; }
+details.sec[open] > summary { border-bottom: 1px solid #26313c; }
+details.sec > .content { padding: 18px 22px 22px; max-width: 760px; }
+body > p.mut, .wrap > p.mut { max-width: 1040px; margin: 28px auto 0; font-size: 0.9em; line-height: 1.55; }
 
-@media (max-width: 1280px) {
-    .container, .wide-container {
-        max-width: 100%;
-    }
-}"""
+figure { margin: 0 0 1.5em; }
+.hero-chart figure { margin: 2em 0; }
+details.sec > .content { overflow-x: auto; }
+body { background: #0b0f14; }
+.hero { background: #121a22; }
+@media (max-width: 768px) { details.sec > .content { padding: 14px 14px 18px; } table { display: block; overflow-x: auto; } }
+"""
 
     _w = m.get("windows", {})
     windows_html = ""
@@ -664,6 +646,7 @@ li {
     <h1>NEAR, Cross-Examined</h1>
     {thesis_line}
     <div class="hero-row">{hero_row}</div>
+    <p class="verify">Check every number yourself: clone the repository and run <code>make verify</code>. It needs no key and no network.</p>
 </div>
 
 <div class="hero-chart">{hero_chart}</div>
