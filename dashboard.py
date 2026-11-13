@@ -621,6 +621,9 @@ body { background: #0b0f14; }
 /* first screen: thesis, headline numbers, how to verify; everything else below the fold */
 @media (min-width: 769px) { .wide-container { min-height: 84vh; display: flex; flex-direction: column; justify-content: center; } }
 .verify { font-size: 1.05em; }
+.ctx { max-width: 820px; margin: 0 0 22px; font-size: 1.12em; line-height: 1.5; color: #c9d4de; }
+.ctx code { color: #00ec97; }
+.thesis { margin-top: 0; }
 """
 
     _w = m.get("windows", {})
@@ -644,13 +647,24 @@ body { background: #0b0f14; }
             "The app-fees-to-gas-fees multiple compares two different flows of money, so it shows scale only.</li></ul>"
         )
 
+    import collections as _co
+    _vc = _co.Counter(c["verdict"] for c in p["claims"])
+    _order = [k for k in ("SUPPORTED", "CONTRADICTED", "SPLIT") if k in _vc] + sorted(k for k in _vc if k not in ("SUPPORTED", "CONTRADICTED", "SPLIT"))
+    _parts = [f"{_vc[k]} {html.escape(k)}" for k in _order]
+    _vtxt = ", ".join(_parts[:-1]) + ", and " + _parts[-1] if len(_parts) > 2 else " and ".join(_parts)
+    _nw = {1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six"}.get(len(p["judges"]), str(len(p["judges"])))
+    ctx_line = (f'<p class="ctx">A single investment claim about NEAR was cross-examined by a panel of AI judges from {_nw} different makers. '
+                f'The panel tested {len(p["claims"])} specific points against on-chain data, resulting in {_vtxt}. '
+                'Check every number yourself: run <code>make verify</code>.</p>')
+
     page = f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>NEAR, Cross-Examined</title><style>{css}</style></head><body>
 <div class="wide-container">
     <h1>NEAR, Cross-Examined</h1>
+    {ctx_line}
     {thesis_line}
     <div class="hero-row">{hero_row}</div>
-    <p class="verify">Check every number yourself: clone the repository and run <code>make verify</code>. It needs no key and no network.</p>
+    <p class="verify">No key and no network needed: clone the repository and run <code>make verify</code>.</p>
 </div>
 
 <div class="hero-chart">{hero_chart}</div>
