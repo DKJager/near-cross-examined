@@ -301,6 +301,10 @@ details.sec > .content { overflow-x: auto; }
 body { background: #0b0f14; }
 .hero { background: #121a22; }
 @media (max-width: 768px) { details.sec > .content { padding: 14px 14px 18px; } table { display: block; overflow-x: auto; } }
+
+/* first screen: thesis, headline numbers, how to verify; everything else below the fold */
+@media (min-width: 769px) { .wide-container { min-height: 84vh; display: flex; flex-direction: column; justify-content: center; } }
+.verify { font-size: 1.05em; }
 </style></head><body>
 <div class="wide-container">
     <h1>NEAR, Cross-Examined</h1>
