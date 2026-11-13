@@ -653,9 +653,9 @@ body { background: #0b0f14; }
     _parts = [f"{_vc[k]} {html.escape(k)}" for k in _order]
     _vtxt = ", ".join(_parts[:-1]) + ", and " + _parts[-1] if len(_parts) > 2 else " and ".join(_parts)
     _nw = {1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six"}.get(len(p["judges"]), str(len(p["judges"])))
-    ctx_line = (f'<p class="ctx">A single investment claim about NEAR was cross-examined by a panel of AI judges from {_nw} different makers. '
-                f'The panel tested {len(p["claims"])} specific points against on-chain data, resulting in {_vtxt}. '
-                'Check every number yourself: run <code>make verify</code>.</p>')
+    ctx_line = (f'<p class="ctx">One claim about NEAR, tested point by point against on-chain data by AI judges from {_nw} different makers: '
+                f'<b>{_vtxt}</b> of {len(p["claims"])} points (SPLIT means no majority of judges). '
+                'Check every number yourself: run <code>make verify</code>, no key and no network.</p>')
 
     page = f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>NEAR, Cross-Examined</title><style>{css}</style></head><body>
@@ -664,7 +664,6 @@ body { background: #0b0f14; }
     {ctx_line}
     {thesis_line}
     <div class="hero-row">{hero_row}</div>
-    <p class="verify">No key and no network needed: clone the repository and run <code>make verify</code>.</p>
 </div>
 
 <div class="hero-chart">{hero_chart}</div>
